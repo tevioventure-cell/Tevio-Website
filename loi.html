@@ -104,12 +104,32 @@ function toggleSiteMenu(){const n=document.getElementById('siteLinks'),b=documen
 const form=document.getElementById('loiForm');
 const error=document.getElementById('loiError');
 const success=document.getElementById('loiSuccess');
-form.addEventListener('submit',function(e){
- e.preventDefault(); error.style.display='none';
+const successText=document.getElementById('loiSuccessText');
+const SUBMISSION_ENDPOINT='https://script.google.com/macros/s/AKfycbyFk2VGpvugj2356MXf8kFf9GpREaP4tJmBnsnNsszeMgutb0psMUNPjqs3C88s4T0I/exec';
+form.addEventListener('submit',async function(e){
+ e.preventDefault(); error.style.display='none'; success.style.display='none';
  if(!form.checkValidity()){form.reportValidity();return;}
  const categories=[...form.querySelectorAll('input[name="category"]:checked')].map(x=>x.value);
  if(!categories.length){error.textContent='Please select at least one area where Tevio can help.';error.style.display='block';return;}
- error.textContent='The form is ready, but the secure submission connection has not been configured yet.';error.style.display='block';
+ const data={};
+ new FormData(form).forEach((value,key)=>{if(key!=='category'&&key!=='confirmation')data[key]=value;});
+ data.category=categories.join(', ');
+ data.confirmation='Confirmed';
+ const submit=form.querySelector('.loi-submit');
+ submit.disabled=true; submit.style.opacity='.55'; submit.innerHTML='SUBMITTING…';
+ try{
+   const body=new URLSearchParams(data).toString();
+   await fetch(SUBMISSION_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body});
+   form.reset();
+   successText.textContent='Your requirement has been recorded. A confirmation email will be sent to you shortly.';
+   success.style.display='block';
+   success.scrollIntoView({behavior:'smooth',block:'nearest'});
+ }catch(err){
+   error.textContent='We could not submit the form right now. Please try again or email hello@tevio.in.';
+   error.style.display='block';
+ }finally{
+   submit.disabled=false; submit.style.opacity='1'; submit.innerHTML='SUBMIT YOUR REQUIREMENT <span>→</span>';
+ }
 });
 </script>
 </body>
