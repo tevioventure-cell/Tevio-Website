@@ -23,92 +23,71 @@
     a{color:var(--text-link);text-decoration:none;}
     a:hover{color:var(--text-link-hover);text-decoration:underline;}
     .container{max-width:var(--container-max);margin:0 auto;padding:0 var(--space-6);}
+    @media(max-width:760px){.contact-grid{grid-template-columns:1fr!important;gap:64px!important}.contact-title{font-size:48px!important}}
   </style>
 </helmet>
 
 <div style="font-family:var(--font-body);color:var(--text-primary);background:var(--surface-page);">
-
   <div>
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;height:88px;">
       <a href="index.html"><img src="assets/logo-wordmark-transparent.png" alt="Tevio" style="height:30px;"></a>
       <div style="display:flex;align-items:center;gap:var(--space-8);">
-        <a href="features.html" style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-base);color:var(--text-primary);">Product</a>
-        <a href="pricing.html" style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-base);color:var(--text-primary);">Pricing</a>
+        <a href="index.html#what-we-solve" style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-base);color:var(--text-primary);">What We Solve</a>
+        <a href="index.html#solutions" style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-base);color:var(--text-primary);">Solutions</a>
         <a href="about.html" style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-base);color:var(--text-primary);">About</a>
-        <div style="--radius-md:2px;display:inline-flex;">
-          <x-import component-from-global-scope="TevioDesignSystem_809dac.Button" hint-size="140px,44px" variant="primary">Get Early Access</x-import>
-        </div>
       </div>
     </div>
   </div>
 
   <div style="background:var(--surface-page);">
-    <div class="container" style="padding:160px var(--space-6) 200px;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:120px;max-width:1040px;margin:0 auto;">
+    <div class="container" style="padding:170px var(--space-6) 210px;">
+      <div class="contact-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:120px;max-width:1080px;margin:0 auto;">
         <div>
-          <h1 style="font-family:'Manrope',var(--font-display);font-size:56px;line-height:1.15;margin:0 0 var(--space-6);font-weight:800;letter-spacing:-0.02em;">Let's talk.</h1>
-          <p style="font-family:'Inter',var(--font-body);font-size:18px;color:var(--text-secondary);line-height:1.5;margin:0 0 var(--space-10);">Tell us about your business and we'll get back within a day.</p>
-          <p style="font-family:'Inter',var(--font-body);font-size:16px;color:var(--text-tertiary);margin:0 0 var(--space-2);">hello@tevio.in</p>
-          <p style="font-family:'Inter',var(--font-body);font-size:16px;color:var(--text-tertiary);">+91 99586 30602</p>
+          <p style="font-family:'Manrope',var(--font-display);font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-tertiary);font-weight:700;margin:0 0 24px;">Detailed discussion</p>
+          <h1 class="contact-title" style="font-family:'Manrope',var(--font-display);font-size:60px;line-height:1.12;margin:0 0 28px;font-weight:800;letter-spacing:-0.035em;">Tell us what is not working.</h1>
+          <p style="font-family:'Inter',var(--font-body);font-size:18px;color:var(--text-secondary);line-height:1.65;margin:0 0 42px;">We start by understanding your business, not by selling you a tool. Share the challenge and we'll use the first conversation to understand where the real opportunity may be.</p>
+          <div style="border-top:1px solid var(--border-subtle);padding-top:28px;">
+            <p style="font-family:'Inter',var(--font-body);font-size:16px;color:var(--text-tertiary);margin:0 0 10px;">hello@tevio.in</p>
+            <p style="font-family:'Inter',var(--font-body);font-size:16px;color:var(--text-tertiary);margin:0;">+91 99586 30602</p>
+          </div>
         </div>
         <div style="display:flex;flex-direction:column;gap:var(--space-5);">
           <x-import component-from-global-scope="TevioDesignSystem_809dac.Input" hint-size="100%,48px" placeholder="Name"></x-import>
-          <x-import component-from-global-scope="TevioDesignSystem_809dac.Input" hint-size="100%,48px" placeholder="Email"></x-import>
-          <x-import component-from-global-scope="TevioDesignSystem_809dac.Input" hint-size="100%,48px" placeholder="Gym or studio name"></x-import>
-          <x-import component-from-global-scope="TevioDesignSystem_809dac.Input" hint-size="100%,100px" placeholder="What are you looking to solve?"></x-import>
+          <x-import component-from-global-scope="TevioDesignSystem_809dac.Input" hint-size="100%,48px" placeholder="Business / organization"></x-import>
+          <x-import component-from-global-scope="TevioDesignSystem_809dac.Input" hint-size="100%,48px" placeholder="Email or phone"></x-import>
+          <x-import component-from-global-scope="TevioDesignSystem_809dac.Input" hint-size="100%,120px" placeholder="What business problem are you trying to solve?"></x-import>
           <div style="--radius-md:2px;">
-            <x-import component-from-global-scope="TevioDesignSystem_809dac.Button" hint-size="100%,48px" variant="primary">Send message</x-import>
+            <x-import component-from-global-scope="TevioDesignSystem_809dac.Button" hint-size="100%,48px" variant="primary">Start the discussion</x-import>
           </div>
+          <p style="font-family:'Inter',var(--font-body);font-size:13px;line-height:1.5;color:var(--text-tertiary);margin:4px 0 0;">No predefined package. No product pitch. Just a detailed conversation about your business.</p>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div style="background:var(--surface-sunken);">
+    <div class="container" style="padding:150px var(--space-6);text-align:center;">
+      <h2 style="font-family:'Manrope',var(--font-display);font-size:44px;line-height:1.2;margin:0 auto 22px;font-weight:700;letter-spacing:-.02em;max-width:700px;">The right solution starts with the right question.</h2>
+      <p style="font-family:'Inter',var(--font-body);font-size:18px;line-height:1.6;color:var(--text-secondary);max-width:620px;margin:0 auto;">Consulting, process optimization, AI, automation, integrations or something else — we'll determine that after we understand the problem.</p>
     </div>
   </div>
 
   <div style="border-top:1px solid var(--border-subtle);">
     <div class="container" style="padding:80px var(--space-6) var(--space-10);">
-      <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--space-12);margin-bottom:64px;">
-        <div>
-          <img src="assets/logo-wordmark-transparent.png" alt="Tevio" style="height:26px;">
-          <p style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);line-height:1.5;max-width:260px;margin:var(--space-4) 0 0;">The AI business manager for fitness businesses.</p>
-        </div>
-        <sc-for list="{{ footerColumns }}" as="col" hint-placeholder-count="3">
-          <div>
-            <span style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-sm);color:var(--text-primary);">{{ col.title }}</span>
-            <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-5);">
-              <sc-for list="{{ col.links }}" as="l" hint-placeholder-count="3">
-                <a href="{{ l.href }}" style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);">{{ l.label }}</a>
-              </sc-for>
-            </div>
-          </div>
-        </sc-for>
-      </div>
-      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-4);padding-top:var(--space-8);border-top:1px solid var(--border-subtle);">
-        <span style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);">© 2026 Tevio</span>
-        <div style="display:flex;align-items:center;gap:var(--space-5);">
-          <a href="#" aria-label="LinkedIn" style="display:flex;align-items:center;"><img src="https://unpkg.com/lucide-static@0.400.0/icons/linkedin.svg" alt="LinkedIn" style="width:18px;height:18px;opacity:0.55;"></a>
-          <a href="#" aria-label="Instagram" style="display:flex;align-items:center;"><img src="https://unpkg.com/lucide-static@0.400.0/icons/instagram.svg" alt="Instagram" style="width:18px;height:18px;opacity:0.55;"></a>
-          <a href="#" aria-label="Twitter" style="display:flex;align-items:center;"><img src="https://unpkg.com/lucide-static@0.400.0/icons/twitter.svg" alt="Twitter" style="width:18px;height:18px;opacity:0.55;"></a>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-4);">
+        <div><img src="assets/logo-wordmark-transparent.png" alt="Tevio" style="height:26px;"></div>
+        <div style="display:flex;gap:var(--space-6);">
+          <a href="privacy-policy.html" style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);">Privacy</a>
+          <a href="index.html" style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);">Back to Tevio</a>
         </div>
       </div>
     </div>
   </div>
-
 </div>
 
 </x-dc>
 <script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      footerColumns: [
-        { title: "Product", links: [{ label: "Features", href: "Features.dc.html" }, { label: "Pricing", href: "Pricing.dc.html" }] },
-        { title: "Company", links: [{ label: "About", href: "About.dc.html" }, { label: "Contact", href: "Contact.dc.html" }] },
-        { title: "Resources", links: [{ label: "Blog", href: "Blog.dc.html" }, { label: "Help center", href: "Help Center.dc.html" }, { label: "Privacy", href: "Privacy Policy.dc.html" }] }
-      ]
-    };
-  }
-}
-
+class Component extends DCLogic { renderVals() { return {}; } }
 </script>
 </body>
 </html>
