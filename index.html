@@ -8,212 +8,36 @@
 <body>
 <x-dc>
 <helmet>
-  <link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/fonts.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/colors.css">
-  <link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/typography.css">
-  <link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/spacing.css">
-  <link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/radius.css">
-  <link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/shadows.css">
-  <link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/styles.css">
-  <script src="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/_ds_bundle.js"></script>
-  <style>
-    body{margin:0;background:var(--surface-page);}
-    a{color:var(--text-link);text-decoration:none;}
-    a:hover{color:var(--text-link-hover);text-decoration:underline;}
-    .container{max-width:var(--container-max);margin:0 auto;padding:0 var(--space-6);}
-    .font-display{font-family:'Manrope',var(--font-display);}
-    @media(max-width:760px){.hero-title{font-size:48px!important}.section-title{font-size:40px!important}.two-col{grid-template-columns:1fr!important;gap:64px!important}.nav-links{gap:16px!important}.nav-links a:not(.cta-link){display:none!important}.cap-grid{grid-template-columns:1fr 1fr!important}}
-    @media(max-width:480px){.hero-title{font-size:40px!important}.cap-grid{grid-template-columns:1fr!important}}
-  </style>
+<link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/fonts.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/colors.css">
+<link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/typography.css">
+<link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/radius.css">
+<link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/shadows.css">
+<link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/styles.css">
+<script src="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/_ds_bundle.js"></script>
+<style>
+body{margin:0;background:var(--surface-page);overflow-x:hidden}a{color:var(--text-link);text-decoration:none}a:hover{color:var(--text-link-hover)}.container{max-width:var(--container-max);margin:0 auto;padding:0 var(--space-6)}
+.mono-photo{filter:grayscale(1);transition:filter .5s ease,transform .8s cubic-bezier(.2,.7,.2,1)}.mono-photo:hover{filter:grayscale(.65);transform:scale(1.015)}.reveal{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}.delay-1{animation-delay:.1s}.delay-2{animation-delay:.2s}.delay-3{animation-delay:.3s}.marquee{animation:marquee 30s linear infinite}.line-arrow{transition:transform .25s ease}.cta:hover .line-arrow{transform:translateX(6px)}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:800px){.nav-links a:not(.primary){display:none!important}.hero-grid,.experience-grid{grid-template-columns:1fr!important}.hero-copy{padding:90px 0 50px!important}.hero-image{min-height:430px!important}.hero-title{font-size:48px!important}.section-title{font-size:40px!important}.process-grid{grid-template-columns:1fr 1fr!important}.problem-grid{grid-template-columns:1fr 1fr!important}.experience-grid{gap:60px!important}}
+@media(max-width:520px){.hero-title{font-size:39px!important}.process-grid,.problem-grid{grid-template-columns:1fr!important}.container{padding-left:22px!important;padding-right:22px!important}.hero-image{min-height:330px!important}.cap-item{min-width:145px!important}}
+</style>
 </helmet>
-
-<div style="font-family:var(--font-body);color:var(--text-primary);background:var(--surface-page);">
-
-  <!-- NAV -->
-  <div>
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;height:88px;">
-      <a href="index.html"><img src="assets/logo-wordmark-transparent.png" alt="Tevio" style="height:30px;"></a>
-      <div class="nav-links" style="display:flex;align-items:center;gap:var(--space-8);">
-        <a href="#what-we-solve" style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-base);color:var(--text-primary);">What We Solve</a>
-        <a href="#solutions" style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-base);color:var(--text-primary);">Solutions</a>
-        <a href="about.html" style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-base);color:var(--text-primary);">About</a>
-        <div style="--radius-md:2px;display:inline-flex;">
-          <x-import component-from-global-scope="TevioDesignSystem_809dac.Button" hint-size="170px,44px" variant="primary">Discuss Your Business</x-import>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- HERO -->
-  <div style="background:var(--surface-page);">
-    <div class="container" style="padding:190px var(--space-6) 180px;text-align:center;">
-      <p style="font-family:'Manrope',var(--font-display);font-size:14px;line-height:1.4;letter-spacing:.16em;text-transform:uppercase;color:var(--text-tertiary);margin:0 0 28px;font-weight:700;">Experience &amp; Business Solutions</p>
-      <h1 class="hero-title" style="font-family:'Manrope',var(--font-display);font-size:72px;line-height:1.08;color:var(--text-primary);max-width:900px;margin:0 auto;font-weight:800;letter-spacing:-0.035em;">Business problems don’t need more software.<br>They need better solutions.</h1>
-      <p style="font-family:'Inter',var(--font-body);font-size:20px;line-height:1.6;color:var(--text-secondary);max-width:650px;margin:var(--space-8) auto 0;font-weight:400;">Tevio combines 15+ years of business experience with process excellence, AI and automation to help businesses understand what is not working, design what should, and implement the solution.</p>
-      <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;margin-top:56px;--radius-md:2px;">
-        <x-import component-from-global-scope="TevioDesignSystem_809dac.Button" hint-size="190px,48px" variant="primary" size="lg">Discuss Your Business</x-import>
-        <a href="#how-we-work" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;font-family:'Manrope',var(--font-display);font-size:16px;font-weight:700;color:var(--text-primary);border-bottom:1px solid var(--border-strong);">How we work →</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- PROBLEM -->
-  <div id="what-we-solve" style="background:var(--surface-sunken);">
-    <div class="container" style="padding:180px var(--space-6);">
-      <div style="max-width:760px;margin:0 auto;text-align:center;">
-        <p style="font-family:'Manrope',var(--font-display);font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-tertiary);font-weight:700;margin:0 0 24px;">Start with the problem</p>
-        <h2 class="section-title" style="font-family:'Manrope',var(--font-display);font-size:56px;line-height:1.15;margin:0;font-weight:700;letter-spacing:-0.025em;">We don't start with a tool.<br>We start with your business.</h2>
-        <p style="font-family:'Inter',var(--font-body);max-width:600px;margin:32px auto 0;font-size:18px;color:var(--text-secondary);line-height:1.65;">Leads get lost. Teams repeat manual work. Systems don't talk to each other. Data exists, but decisions still depend on instinct. Technology should fix these problems — not create more of them.</p>
-      </div>
-      <div class="two-col" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border-subtle);max-width:1000px;margin:100px auto 0;">
-        <div style="background:var(--surface-sunken);padding:52px 44px;">
-          <span style="font-family:'Manrope',var(--font-display);font-size:16px;font-weight:700;color:var(--navy-300);">01</span>
-          <h3 style="font-family:'Manrope',var(--font-display);font-size:26px;font-weight:700;margin:20px 0 12px;">Sales &amp; growth</h3>
-          <p style="font-family:'Inter',var(--font-body);margin:0;font-size:17px;line-height:1.6;color:var(--text-secondary);">Find leakage in the sales journey, align teams and automate the right follow-ups.</p>
-        </div>
-        <div style="background:var(--surface-sunken);padding:52px 44px;">
-          <span style="font-family:'Manrope',var(--font-display);font-size:16px;font-weight:700;color:var(--navy-300);">02</span>
-          <h3 style="font-family:'Manrope',var(--font-display);font-size:26px;font-weight:700;margin:20px 0 12px;">Operations</h3>
-          <p style="font-family:'Inter',var(--font-body);margin:0;font-size:17px;line-height:1.6;color:var(--text-secondary);">Remove friction from processes, reduce repetitive work and make execution more reliable.</p>
-        </div>
-        <div style="background:var(--surface-sunken);padding:52px 44px;">
-          <span style="font-family:'Manrope',var(--font-display);font-size:16px;font-weight:700;color:var(--navy-300);">03</span>
-          <h3 style="font-family:'Manrope',var(--font-display);font-size:26px;font-weight:700;margin:20px 0 12px;">Data &amp; decisions</h3>
-          <p style="font-family:'Inter',var(--font-body);margin:0;font-size:17px;line-height:1.6;color:var(--text-secondary);">Connect the right information and turn it into useful insights, priorities and actions.</p>
-        </div>
-        <div style="background:var(--surface-sunken);padding:52px 44px;">
-          <span style="font-family:'Manrope',var(--font-display);font-size:16px;font-weight:700;color:var(--navy-300);">04</span>
-          <h3 style="font-family:'Manrope',var(--font-display);font-size:26px;font-weight:700;margin:20px 0 12px;">Technology adoption</h3>
-          <p style="font-family:'Inter',var(--font-body);margin:0;font-size:17px;line-height:1.6;color:var(--text-secondary);">Find practical places for AI, automation and integrations without replacing what already works.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- EXPERIENCE -->
-  <div style="background:var(--surface-page);">
-    <div class="container" style="padding:190px var(--space-6);">
-      <div class="two-col" style="display:grid;grid-template-columns:.8fr 1.2fr;gap:120px;align-items:start;max-width:1080px;margin:0 auto;">
-        <div>
-          <p style="font-family:'Manrope',var(--font-display);font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-tertiary);font-weight:700;margin:0;">Experience matters</p>
-          <div style="font-family:'Manrope',var(--font-display);font-size:88px;line-height:1;font-weight:800;letter-spacing:-.05em;margin-top:28px;color:var(--text-primary);">15+</div>
-          <p style="font-family:'Inter',var(--font-body);font-size:18px;color:var(--text-secondary);margin:18px 0 0;line-height:1.5;">years of experience across startups and large-scale organizations.</p>
-        </div>
-        <div>
-          <h2 class="section-title" style="font-family:'Manrope',var(--font-display);font-size:48px;line-height:1.2;margin:0;font-weight:700;letter-spacing:-0.025em;">We've lived the problems we help solve.</h2>
-          <p style="font-family:'Inter',var(--font-body);font-size:18px;line-height:1.7;color:var(--text-secondary);margin:28px 0 0;">Business is rarely broken because one tool is missing. It is usually a combination of people, process, data, systems and decisions. Our experience helps us see the whole picture before recommending a solution.</p>
-          <p style="font-family:'Inter',var(--font-body);font-size:18px;line-height:1.7;color:var(--text-secondary);margin:20px 0 0;">That is why we are technology agnostic. We use AI, automation, integrations and workflows when they solve a real business problem — not simply because they are new.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- HOW WE WORK -->
-  <div id="how-we-work" style="background:var(--surface-inverse);">
-    <div class="container" style="padding:190px var(--space-6);color:var(--text-inverse);">
-      <div style="max-width:760px;margin:0 auto 100px;text-align:center;">
-        <p style="font-family:'Manrope',var(--font-display);font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-inverse);opacity:.6;font-weight:700;margin:0 0 24px;">How we work</p>
-        <h2 class="section-title" style="font-family:'Manrope',var(--font-display);font-size:56px;line-height:1.15;margin:0;font-weight:700;letter-spacing:-0.025em;">Understand. Design. Implement. Improve.</h2>
-      </div>
-      <div class="cap-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.18);">
-        <div style="padding:44px 28px 20px 0;border-right:1px solid rgba(255,255,255,.18);">
-          <span style="font-family:'Manrope',var(--font-display);font-size:15px;opacity:.55;">01</span>
-          <h3 style="font-family:'Manrope',var(--font-display);font-size:24px;margin:18px 0 12px;">Understand</h3>
-          <p style="font-family:'Inter',var(--font-body);font-size:16px;line-height:1.6;opacity:.7;margin:0;">Understand the business, goals, processes and constraints.</p>
-        </div>
-        <div style="padding:44px 28px 20px;border-right:1px solid rgba(255,255,255,.18);">
-          <span style="font-family:'Manrope',var(--font-display);font-size:15px;opacity:.55;">02</span>
-          <h3 style="font-family:'Manrope',var(--font-display);font-size:24px;margin:18px 0 12px;">Design</h3>
-          <p style="font-family:'Inter',var(--font-body);font-size:16px;line-height:1.6;opacity:.7;margin:0;">Map the opportunity and design the right process and solution.</p>
-        </div>
-        <div style="padding:44px 28px;border-right:1px solid rgba(255,255,255,.18);">
-          <span style="font-family:'Manrope',var(--font-display);font-size:15px;opacity:.55;">03</span>
-          <h3 style="font-family:'Manrope',var(--font-display);font-size:24px;margin:18px 0 12px;">Implement</h3>
-          <p style="font-family:'Inter',var(--font-body);font-size:16px;line-height:1.6;opacity:.7;margin:0;">Deploy the workflows, tools, integrations and automation.</p>
-        </div>
-        <div style="padding:44px 0 20px 28px;">
-          <span style="font-family:'Manrope',var(--font-display);font-size:15px;opacity:.55;">04</span>
-          <h3 style="font-family:'Manrope',var(--font-display);font-size:24px;margin:18px 0 12px;">Improve</h3>
-          <p style="font-family:'Inter',var(--font-body);font-size:16px;line-height:1.6;opacity:.7;margin:0;">Measure outcomes, learn and continuously improve the system.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SOLUTIONS -->
-  <div id="solutions" style="background:var(--surface-page);">
-    <div class="container" style="padding:190px var(--space-6);">
-      <div style="max-width:760px;margin:0 auto 90px;text-align:center;">
-        <p style="font-family:'Manrope',var(--font-display);font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-tertiary);font-weight:700;margin:0 0 24px;">Capabilities</p>
-        <h2 class="section-title" style="font-family:'Manrope',var(--font-display);font-size:56px;line-height:1.15;margin:0;font-weight:700;letter-spacing:-0.025em;">The technology is only useful when it solves something.</h2>
-      </div>
-      <div class="cap-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border-subtle);max-width:1080px;margin:0 auto;">
-        <div style="background:var(--surface-page);padding:42px 36px;"><h3 style="font-family:'Manrope',var(--font-display);font-size:22px;margin:0 0 12px;">AI Agents</h3><p style="font-family:'Inter',var(--font-body);font-size:16px;line-height:1.6;color:var(--text-secondary);margin:0;">AI systems that can understand tasks and act within defined business processes.</p></div>
-        <div style="background:var(--surface-page);padding:42px 36px;"><h3 style="font-family:'Manrope',var(--font-display);font-size:22px;margin:0 0 12px;">AI Automation</h3><p style="font-family:'Inter',var(--font-body);font-size:16px;line-height:1.6;color:var(--text-secondary);margin:0;">Automate repetitive decisions, communication and operational work.</p></div>
-        <div style="background:var(--surface-page);padding:42px 36px;"><h3 style="font-family:'Manrope',var(--font-display);font-size:22px;margin:0 0 12px;">Business Workflows</h3><p style="font-family:'Inter',var(--font-body);font-size:16px;line-height:1.6;color:var(--text-secondary);margin:0;">Connect people, processes and applications into reliable workflows.</p></div>
-        <div style="background:var(--surface-page);padding:42px 36px;"><h3 style="font-family:'Manrope',var(--font-display);font-size:22px;margin:0 0 12px;">Sales Process</h3><p style="font-family:'Inter',var(--font-body);font-size:16px;line-height:1.6;color:var(--text-secondary);margin:0;">Align lead handling, follow-ups, ownership and reporting around the sales journey.</p></div>
-        <div style="background:var(--surface-page);padding:42px 36px;"><h3 style="font-family:'Manrope',var(--font-display);font-size:22px;margin:0 0 12px;">WhatsApp Automation</h3><p style="font-family:'Inter',var(--font-body);font-size:16px;line-height:1.6;color:var(--text-secondary);margin:0;">Turn conversations into structured customer and business workflows.</p></div>
-        <div style="background:var(--surface-page);padding:42px 36px;"><h3 style="font-family:'Manrope',var(--font-display);font-size:22px;margin:0 0 12px;">API &amp; Integrations</h3><p style="font-family:'Inter',var(--font-body);font-size:16px;line-height:1.6;color:var(--text-secondary);margin:0;">Make existing systems work together instead of creating another disconnected tool.</p></div>
-        <div style="background:var(--surface-page);padding:42px 36px;"><h3 style="font-family:'Manrope',var(--font-display);font-size:22px;margin:0 0 12px;">Cloud Telephony</h3><p style="font-family:'Inter',var(--font-body);font-size:16px;line-height:1.6;color:var(--text-secondary);margin:0;">Connect calls, teams, customers and workflows for better execution.</p></div>
-        <div style="background:var(--surface-page);padding:42px 36px;"><h3 style="font-family:'Manrope',var(--font-display);font-size:22px;margin:0 0 12px;">Social Automation</h3><p style="font-family:'Inter',var(--font-body);font-size:16px;line-height:1.6;color:var(--text-secondary);margin:0;">Build repeatable content, publishing and lead-generation workflows.</p></div>
-        <div style="background:var(--surface-page);padding:42px 36px;"><h3 style="font-family:'Manrope',var(--font-display);font-size:22px;margin:0 0 12px;">Process Excellence</h3><p style="font-family:'Inter',var(--font-body);font-size:16px;line-height:1.6;color:var(--text-secondary);margin:0;">Improve the process before automating it, so technology amplifies good execution.</p></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CTA -->
-  <div style="background:var(--surface-sunken);">
-    <div class="container" style="padding:210px var(--space-6);text-align:center;">
-      <p style="font-family:'Manrope',var(--font-display);font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-tertiary);font-weight:700;margin:0 0 24px;">Start with a conversation</p>
-      <h2 class="section-title" style="font-family:'Manrope',var(--font-display);font-size:60px;line-height:1.12;margin:0 auto 28px;font-weight:800;letter-spacing:-0.035em;max-width:780px;">You bring the business problem.<br>We'll work out the solution.</h2>
-      <p style="font-family:'Inter',var(--font-body);font-size:18px;line-height:1.6;color:var(--text-secondary);max-width:560px;margin:0 auto;">A detailed discussion is the first step. No product pitch. No predefined package. Just an understanding of what your business needs.</p>
-      <div style="display:inline-flex;--radius-md:2px;margin-top:48px;">
-        <a href="contact.html"><x-import component-from-global-scope="TevioDesignSystem_809dac.Button" hint-size="210px,48px" variant="primary">Discuss Your Business</x-import></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <div style="border-top:1px solid var(--border-subtle);">
-    <div class="container" style="padding:80px var(--space-6) var(--space-10);">
-      <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:var(--space-12);margin-bottom:64px;">
-        <div>
-          <img src="assets/logo-wordmark-transparent.png" alt="Tevio" style="height:26px;">
-          <p style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);line-height:1.6;max-width:320px;margin:var(--space-4) 0 0;">Experience &amp; Business Solutions. Helping businesses improve processes and put technology to work.</p>
-        </div>
-        <div>
-          <span style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-sm);color:var(--text-primary);">Explore</span>
-          <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-5);">
-            <a href="#what-we-solve" style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);">What We Solve</a>
-            <a href="#solutions" style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);">Solutions</a>
-            <a href="about.html" style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);">About Tevio</a>
-          </div>
-        </div>
-        <div>
-          <span style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-sm);color:var(--text-primary);">Start a conversation</span>
-          <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-5);">
-            <a href="mailto:hello@tevio.in" style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);">hello@tevio.in</a>
-            <a href="tel:+919958630602" style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);">+91 99586 30602</a>
-            <a href="contact.html" style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);">Discuss Your Business →</a>
-          </div>
-        </div>
-      </div>
-      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-4);padding-top:var(--space-8);border-top:1px solid var(--border-subtle);">
-        <span style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);">© 2026 Tevio</span>
-        <a href="privacy-policy.html" style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);">Privacy</a>
-      </div>
-    </div>
-  </div>
-
+<div style="font-family:var(--font-body);color:var(--text-primary);background:var(--surface-page)">
+<header style="height:88px;border-bottom:1px solid var(--border-subtle);background:rgba(255,255,255,.94);position:relative;z-index:2"><div class="container" style="height:100%;display:flex;align-items:center;justify-content:space-between"><a href="index.html"><img src="assets/logo-wordmark-transparent.png" alt="Tevio" style="height:30px"></a><nav class="nav-links" style="display:flex;align-items:center;gap:var(--space-8)"><a href="#what-we-solve" style="font-family:'Manrope';font-weight:700;font-size:var(--text-base);color:var(--text-primary)">What We Solve</a><a href="features.html" style="font-family:'Manrope';font-weight:700;font-size:var(--text-base);color:var(--text-primary)">Solutions</a><a href="about.html" style="font-family:'Manrope';font-weight:700;font-size:var(--text-base);color:var(--text-primary)">About</a><a class="primary" href="contact.html" style="background:var(--surface-inverse);color:var(--text-inverse);padding:13px 20px;font-family:'Manrope';font-size:13px;font-weight:800">DISCUSS YOUR BUSINESS</a></nav></div></header>
+<section class="hero-grid" style="display:grid;grid-template-columns:1fr 1.08fr;min-height:650px;border-bottom:1px solid var(--border-subtle)"><div class="hero-copy container" style="padding-top:125px;padding-bottom:110px;display:flex;flex-direction:column;justify-content:center"><p class="reveal" style="font-family:'Manrope';font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-tertiary);font-weight:800;margin:0 0 26px">Experience &amp; Business Solutions</p><h1 class="hero-title reveal delay-1" style="font-family:'Manrope';font-size:67px;line-height:1.06;letter-spacing:-.045em;font-weight:800;max-width:720px;margin:0">Business problems don’t need more software.<br><span style="font-weight:500">They need better solutions.</span></h1><p class="reveal delay-2" style="font-family:'Inter';font-size:18px;line-height:1.65;color:var(--text-secondary);max-width:570px;margin:30px 0 0">Tevio combines 15+ years of business experience with process excellence, AI and automation to understand what is not working, design what should, and make it happen.</p><div class="reveal delay-3" style="display:flex;gap:14px;align-items:center;margin-top:42px;flex-wrap:wrap"><a class="cta" href="contact.html" style="background:var(--surface-inverse);color:var(--text-inverse);padding:16px 22px;font-family:'Manrope';font-size:13px;font-weight:800">DISCUSS YOUR BUSINESS <span class="line-arrow" style="display:inline-block;margin-left:10px">→</span></a><a href="#how-we-work" style="padding:15px 5px;font-family:'Manrope';font-size:13px;font-weight:800;color:var(--text-primary);border-bottom:1px solid var(--border-strong)">HOW WE WORK</a></div></div><div class="hero-image" style="min-height:650px;background-image:linear-gradient(90deg,var(--surface-page) 0%,rgba(255,255,255,0) 30%),url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=85');background-size:cover;background-position:center;filter:grayscale(1)"></div></section>
+<section id="what-we-solve" style="padding:170px 0;background:var(--surface-page)"><div class="container"><div style="max-width:780px;margin:0 auto;text-align:center"><p style="font-family:'Manrope';font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-tertiary);font-weight:800;margin:0 0 22px">Start with the problem</p><h2 class="section-title" style="font-family:'Manrope';font-size:53px;line-height:1.12;letter-spacing:-.035em;margin:0;font-weight:700">We start with the problem.<br>Not the technology.</h2><p style="font-family:'Inter';font-size:18px;line-height:1.7;color:var(--text-secondary);max-width:650px;margin:28px auto 0">Your business may need consultancy, process improvement, automation, integration, AI—or none of them. We find that out first.</p></div><div class="problem-grid" style="display:grid;grid-template-columns:repeat(4,1fr);max-width:1120px;margin:100px auto 0;border-top:1px solid var(--border-subtle);border-left:1px solid var(--border-subtle)"><div style="padding:35px 26px;border-right:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)"><span style="font-family:'Manrope';font-weight:800;font-size:12px;color:var(--text-tertiary)">01</span><h3 style="font-family:'Manrope';font-size:21px;margin:20px 0 10px">Sales &amp; growth</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Find leakage, align the sales process and automate follow-up.</p></div><div style="padding:35px 26px;border-right:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)"><span style="font-family:'Manrope';font-weight:800;font-size:12px;color:var(--text-tertiary)">02</span><h3 style="font-family:'Manrope';font-size:21px;margin:20px 0 10px">Operations</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Remove friction, reduce manual work and improve execution.</p></div><div style="padding:35px 26px;border-right:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)"><span style="font-family:'Manrope';font-weight:800;font-size:12px;color:var(--text-tertiary)">03</span><h3 style="font-family:'Manrope';font-size:21px;margin:20px 0 10px">Data &amp; decisions</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Turn scattered information into priorities and useful actions.</p></div><div style="padding:35px 26px;border-right:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)"><span style="font-family:'Manrope';font-weight:800;font-size:12px;color:var(--text-tertiary)">04</span><h3 style="font-family:'Manrope';font-size:21px;margin:20px 0 10px">Technology</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Use AI and automation where they create measurable value.</p></div></div></div></section>
+<section style="padding:0 0 175px;background:var(--surface-page)"><div class="container"><div class="experience-grid" style="display:grid;grid-template-columns:1.05fr .95fr;gap:100px;max-width:1120px;margin:0 auto;align-items:center"><div style="height:440px;overflow:hidden"><img class="mono-photo" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85" alt="Business discussion" style="width:100%;height:100%;object-fit:cover"></div><div><p style="font-family:'Manrope';font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-tertiary);font-weight:800;margin:0 0 20px">Our experience</p><div style="font-family:'Manrope';font-size:84px;line-height:1;font-weight:800;letter-spacing:-.06em">15+</div><p style="font-family:'Manrope';font-size:20px;font-weight:700;margin:12px 0 30px">years across startups and large-scale organisations.</p><p style="font-family:'Inter';font-size:17px;line-height:1.7;color:var(--text-secondary);margin:0">We've built, scaled and transformed businesses. We've dealt with people, processes, sales, operations, technology and the gaps between them.</p><p style="font-family:'Inter';font-size:17px;line-height:1.7;color:var(--text-secondary);margin:18px 0 0">That experience matters because the right answer is rarely just another tool.</p></div></div></div></section>
+<section id="how-we-work" style="padding:175px 0;background:var(--surface-sunken)"><div class="container"><div style="max-width:760px;margin:0 auto;text-align:center"><p style="font-family:'Manrope';font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-tertiary);font-weight:800;margin:0 0 22px">Our approach</p><h2 class="section-title" style="font-family:'Manrope';font-size:53px;line-height:1.12;letter-spacing:-.035em;margin:0;font-weight:700">From business problem<br>to working solution.</h2></div><div class="process-grid" style="display:grid;grid-template-columns:repeat(5,1fr);max-width:1120px;margin:100px auto 0"><div style="padding:28px 24px 0 0;border-top:1px solid var(--border-strong)"><span style="font-family:'Manrope';font-weight:800;font-size:12px">01</span><h3 style="font-family:'Manrope';font-size:21px;margin:18px 0 9px">Understand</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Business, people, process and goals.</p></div><div style="padding:28px 24px 0;border-top:1px solid var(--border-strong)"><span style="font-family:'Manrope';font-weight:800;font-size:12px">02</span><h3 style="font-family:'Manrope';font-size:21px;margin:18px 0 9px">Diagnose</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Find the gaps and priorities.</p></div><div style="padding:28px 24px 0;border-top:1px solid var(--border-strong)"><span style="font-family:'Manrope';font-weight:800;font-size:12px">03</span><h3 style="font-family:'Manrope';font-size:21px;margin:18px 0 9px">Design</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Create the practical solution.</p></div><div style="padding:28px 24px 0;border-top:1px solid var(--border-strong)"><span style="font-family:'Manrope';font-weight:800;font-size:12px">04</span><h3 style="font-family:'Manrope';font-size:21px;margin:18px 0 9px">Deploy</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Implement process and technology.</p></div><div style="padding:28px 0 0 24px;border-top:1px solid var(--border-strong)"><span style="font-family:'Manrope';font-weight:800;font-size:12px">05</span><h3 style="font-family:'Manrope';font-size:21px;margin:18px 0 9px">Improve</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Measure and continuously optimize.</p></div></div></div></section>
+<section id="solutions" style="padding:165px 0;background:var(--surface-page);overflow:hidden"><div class="container"><div style="text-align:center;max-width:760px;margin:0 auto"><p style="font-family:'Manrope';font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-tertiary);font-weight:800;margin:0 0 22px">What we build around your business</p><h2 class="section-title" style="font-family:'Manrope';font-size:53px;line-height:1.12;letter-spacing:-.035em;margin:0;font-weight:700">Capabilities are tools.<br>Outcomes are the goal.</h2></div></div><div style="margin-top:90px;border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);white-space:nowrap"><div class="marquee" style="display:flex;width:max-content"><div style="display:flex"><span class="cap-item">AI Agents</span><span class="cap-item">AI Automation</span><span class="cap-item">Business Workflows</span><span class="cap-item">Sales Alignment</span><span class="cap-item">Process Excellence</span><span class="cap-item">WhatsApp Automation</span><span class="cap-item">API Integrations</span><span class="cap-item">Cloud Telephony</span><span class="cap-item">Social Automation</span><span class="cap-item">CRM &amp; Data</span></div><div style="display:flex"><span class="cap-item">AI Agents</span><span class="cap-item">AI Automation</span><span class="cap-item">Business Workflows</span><span class="cap-item">Sales Alignment</span><span class="cap-item">Process Excellence</span><span class="cap-item">WhatsApp Automation</span><span class="cap-item">API Integrations</span><span class="cap-item">Cloud Telephony</span><span class="cap-item">Social Automation</span><span class="cap-item">CRM &amp; Data</span></div></div></div></section>
+<section style="padding:0 0 170px;background:var(--surface-page)"><div class="container"><div style="display:grid;grid-template-columns:1fr 1fr;gap:50px;max-width:1120px;margin:0 auto;align-items:stretch"><div style="min-height:420px;overflow:hidden"><img class="mono-photo" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" alt="Modern business environment" style="width:100%;height:100%;object-fit:cover"></div><div style="padding:45px 0 45px 30px;display:flex;flex-direction:column;justify-content:center"><p style="font-family:'Manrope';font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-tertiary);font-weight:800;margin:0 0 22px">Sound familiar?</p><div><div style="padding:19px 0;border-top:1px solid var(--border-subtle);font-family:'Manrope';font-size:19px;font-weight:700">Leads are being lost.</div><div style="padding:19px 0;border-top:1px solid var(--border-subtle);font-family:'Manrope';font-size:19px;font-weight:700">Your team spends hours on repetitive work.</div><div style="padding:19px 0;border-top:1px solid var(--border-subtle);font-family:'Manrope';font-size:19px;font-weight:700">Your systems don't talk to each other.</div><div style="padding:19px 0;border-top:1px solid var(--border-subtle);font-family:'Manrope';font-size:19px;font-weight:700">You have data but no clear decisions.</div><div style="padding:19px 0;border-top:1px solid var(--border-subtle);font-family:'Manrope';font-size:19px;font-weight:700">You know AI can help, but don't know where to start.</div></div><a class="cta" href="contact.html" style="font-family:'Manrope';font-size:13px;font-weight:800;margin-top:28px;color:var(--text-primary)">LET'S SOLVE IT <span class="line-arrow" style="display:inline-block;margin-left:8px">→</span></a></div></div></div></section>
+<section style="padding:130px 0;background:var(--surface-inverse)"><div class="container"><div style="max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:60px;flex-wrap:wrap"><div><h2 style="font-family:'Manrope';font-size:48px;line-height:1.12;letter-spacing:-.035em;color:var(--text-inverse);margin:0;font-weight:700">You bring the business problem.<br>We'll work out the solution.</h2><p style="font-family:'Inter';font-size:16px;color:var(--text-inverse);opacity:.65;line-height:1.6;margin:22px 0 0">No fixed package. No product pitch. Just a detailed conversation.</p></div><a class="cta" href="contact.html" style="background:#fff;color:#111;padding:17px 23px;font-family:'Manrope';font-size:13px;font-weight:800;white-space:nowrap">DISCUSS YOUR BUSINESS <span class="line-arrow" style="display:inline-block;margin-left:10px">→</span></a></div></div></section>
+<footer style="border-top:1px solid var(--border-subtle)"><div class="container" style="padding:55px 0 35px"><div style="display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap"><div><img src="assets/logo-wordmark-transparent.png" alt="Tevio" style="height:27px"><p style="font-family:'Inter';font-size:13px;color:var(--text-tertiary);margin:12px 0 0">Experience &amp; Business Solutions.</p></div><div style="display:flex;gap:28px;font-family:'Inter';font-size:14px;color:var(--text-tertiary)"><a href="features.html">Solutions</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div style="font-family:'Inter';font-size:14px;color:var(--text-tertiary)">hello@tevio.in&nbsp;&nbsp;&nbsp; +91 99586 30602</div></div><div style="border-top:1px solid var(--border-subtle);margin-top:40px;padding-top:20px;font-family:'Inter';font-size:12px;color:var(--text-tertiary)">© 2026 Tevio</div></div></footer>
 </div>
-
 </x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() { return {}; }
-}
-</script>
+<script type="text/x-dc" data-dc-script>class Component extends DCLogic { renderVals(){ return {}; } }</script>
 </body>
 </html>
