@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Start a conversation with Tevio about your business and implementation requirements.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/colors.css">
+<link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/typography.css">
+<link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/radius.css">
+<link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/shadows.css">
+<link rel="stylesheet" href="tevio-site.css">
+<style>
+.loi-intro{padding:145px 0 105px}.loi-intro h1{max-width:980px}.loi-intro p{max-width:650px}
+.loi-section{padding:120px 0;background:var(--soft)}
+.loi-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:110px;align-items:start}
+.loi-side{position:sticky;top:40px}.loi-side h2{font:700 clamp(38px,4.5vw,62px)/1.04 Manrope,sans-serif;letter-spacing:-.055em;margin:0;max-width:500px}.loi-side p{font:400 16px/1.7 Inter,sans-serif;color:var(--muted);max-width:430px;margin:28px 0 0}
+.loi-form{background:#fff;padding:52px 54px;border:1px solid var(--line)}
+.loi-group{border-top:1px solid var(--line);padding-top:34px;margin-top:38px}.loi-group:first-child{border-top:0;padding-top:0;margin-top:0}.loi-group h3{font:700 18px Manrope,sans-serif;letter-spacing:-.02em;margin:0 0 25px}.loi-fields{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}.loi-field{margin-bottom:25px}.loi-field.full{grid-column:1/-1}.loi-field label,.loi-legend{display:block;font:650 12px Manrope,sans-serif;margin:0 0 10px}.loi-field label span{color:#888;font-weight:500}.loi-field input,.loi-field textarea,.loi-field select{width:100%;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:13px 0;font:400 16px Inter,sans-serif;outline:none;background:transparent;color:var(--black)}.loi-field textarea{min-height:110px;resize:vertical;line-height:1.6}.loi-field input:focus,.loi-field textarea:focus,.loi-field select:focus{border-bottom-color:var(--black)}.loi-field select{cursor:pointer}
+.loi-options{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}.loi-option{display:flex;align-items:flex-start;gap:10px;padding:12px 0;font:400 14px/1.4 Inter,sans-serif;color:#333;cursor:pointer}.loi-option input{margin-top:3px;accent-color:#0a0a0a}.loi-confirm{display:flex;gap:12px;align-items:flex-start;font:400 13px/1.65 Inter,sans-serif;color:var(--muted);cursor:pointer}.loi-confirm input{margin-top:4px;accent-color:#0a0a0a;flex:0 0 auto}.loi-submit{margin-top:28px;border:0;cursor:pointer}.loi-note{font:400 12px/1.6 Inter,sans-serif;color:#888;margin:16px 0 0}.loi-success{display:none;padding:30px 0 5px;border-top:1px solid var(--line);margin-top:32px}.loi-success h3{font:700 25px Manrope,sans-serif;margin:0 0 10px}.loi-success p{font:400 15px/1.6 Inter,sans-serif;color:var(--muted);margin:0}.loi-error{display:none;color:#9a1b1b;font:500 13px/1.5 Inter,sans-serif;margin-top:15px}
+@media(max-width:900px){.loi-intro{padding:110px 0 80px}.loi-section{padding:90px 0}.loi-grid{grid-template-columns:1fr;gap:60px}.loi-side{position:static}.loi-form{padding:40px 34px}}
+@media(max-width:560px){.loi-intro{padding:90px 0 70px}.loi-section{padding:70px 0}.loi-form{padding:30px 22px}.loi-fields,.loi-options{grid-template-columns:1fr}.loi-side h2{font-size:42px}}
+</style>
+</head>
+<body>
+<header class="site-wrap site-nav">
+<a class="site-logo" href="index.html"><img src="/logo-wordmark-transparent.png" alt="Tevio"></a>
+<button class="site-menu" aria-label="Open menu" aria-expanded="false" onclick="toggleSiteMenu()">☰</button>
+<nav class="site-links" id="siteLinks"><a href="features.html">Solutions</a><a href="about.html">About</a><a href="blog.html">Insights</a><a class="site-cta" href="contact.html">DISCUSS YOUR BUSINESS</a></nav>
+</header>
+<main>
+<section class="site-wrap page-hero loi-intro reveal">
+<p class="eyebrow">Start a conversation</p>
+<h1>Tell us what's not working.<br>We'll work out what should.</h1>
+<p>Share a little about your business, the problem you're facing and what you want to achieve. We'll review it before the first detailed discussion.</p>
+</section>
+<section class="loi-section">
+<div class="site-wrap loi-grid">
+<div class="loi-side">
+<p class="eyebrow">Business &amp; implementation brief</p>
+<h2>The right solution starts with the right question.</h2>
+<p>Tevio combines experience, process thinking and technology. Sometimes the answer is consultancy. Sometimes it is process redesign, automation or AI. We determine that after we understand the problem.</p>
+</div>
+<form class="loi-form" id="loiForm" novalidate>
+<div class="loi-group">
+<h3>01 &nbsp; Your details</h3>
+<div class="loi-fields">
+<div class="loi-field"><label for="name">Full name <span>*</span></label><input id="name" name="name" type="text" required autocomplete="name"></div>
+<div class="loi-field"><label for="business">Company / Business <span>*</span></label><input id="business" name="business" type="text" required autocomplete="organization"></div>
+<div class="loi-field"><label for="designation">Designation</label><input id="designation" name="designation" type="text"></div>
+<div class="loi-field"><label for="phone">Phone <span>*</span></label><input id="phone" name="phone" type="tel" required autocomplete="tel"></div>
+<div class="loi-field"><label for="email">Email <span>*</span></label><input id="email" name="email" type="email" required autocomplete="email"></div>
+<div class="loi-field full"><label for="address">Business address <span>*</span></label><input id="address" name="address" type="text" required autocomplete="street-address"></div>
+<div class="loi-field"><label for="city">City</label><input id="city" name="city" type="text" autocomplete="address-level2"></div>
+<div class="loi-field"><label for="state">State</label><input id="state" name="state" type="text" autocomplete="address-level1"></div>
+<div class="loi-field"><label for="pin">PIN Code</label><input id="pin" name="pin" type="text" inputmode="numeric" autocomplete="postal-code"></div>
+</div>
+</div>
+<div class="loi-group">
+<h3>02 &nbsp; Your requirement</h3>
+<fieldset style="border:0;padding:0;margin:0"><legend class="loi-legend">What can Tevio help you with?</legend>
+<div class="loi-options">
+<label class="loi-option"><input type="checkbox" name="category" value="Business & Process Consulting">Business &amp; Process Consulting</label>
+<label class="loi-option"><input type="checkbox" name="category" value="Process Optimization">Process Optimization</label>
+<label class="loi-option"><input type="checkbox" name="category" value="Process Excellence">Process Excellence</label>
+<label class="loi-option"><input type="checkbox" name="category" value="Sales Process Alignment">Sales Process Alignment</label>
+<label class="loi-option"><input type="checkbox" name="category" value="AI Automation">AI Automation</label>
+<label class="loi-option"><input type="checkbox" name="category" value="AI Agents">AI Agents</label>
+<label class="loi-option"><input type="checkbox" name="category" value="Workflow Automation">Workflow Automation</label>
+<label class="loi-option"><input type="checkbox" name="category" value="WhatsApp Automation">WhatsApp Automation</label>
+<label class="loi-option"><input type="checkbox" name="category" value="API / Integrations">API / Integrations</label>
+<label class="loi-option"><input type="checkbox" name="category" value="Social Media Automation">Social Media Automation</label>
+<label class="loi-option"><input type="checkbox" name="category" value="Cloud Telephony">Cloud Telephony</label>
+<label class="loi-option"><input type="checkbox" name="category" value="Other">Other</label>
+</div></fieldset>
+<div class="loi-field" style="margin-top:28px"><label for="problem">What problem are you trying to solve? <span>*</span></label><textarea id="problem" name="problem" required></textarea></div>
+<div class="loi-field"><label for="outcome">What would you like to achieve?</label><textarea id="outcome" name="outcome"></textarea></div>
+<div class="loi-field"><label for="tools">Current tools / systems</label><textarea id="tools" name="tools"></textarea></div>
+<div class="loi-field"><label for="implementation">Implementation requirement <span>*</span></label><textarea id="implementation" name="implementation" required></textarea></div>
+<div class="loi-fields">
+<div class="loi-field"><label for="timeline">Expected implementation timeline</label><select id="timeline" name="timeline"><option value="">Select</option><option>Immediately</option><option>Within Week</option><option>Within 30 days</option><option>1–3 months</option><option>3+ months</option><option>To Be Discussed</option></select></div>
+<div class="loi-field"><label for="scope">Scope</label><select id="scope" name="scope"><option value="">Select</option><option>Single Process</option><option>Multiple Processes</option><option>Organisation-wide</option><option>To Be Determined</option></select></div>
+</div>
+<div class="loi-field"><label for="additional">Additional requirements</label><textarea id="additional" name="additional"></textarea></div>
+</div>
+<div class="loi-group">
+<h3>03 &nbsp; Your intent</h3>
+<label class="loi-confirm"><input id="confirmation" name="confirmation" type="checkbox" required><span>I confirm that the information provided is accurate and represents our current intent to explore the proposed solution and implementation with Tevio. I understand that final scope, commercials, timelines and contractual terms will be mutually agreed separately.</span></label>
+<button class="button loi-submit" type="submit">SUBMIT YOUR REQUIREMENT <span>→</span></button>
+<p class="loi-note">Your information will be used to understand your requirement and coordinate the next discussion with Tevio.</p>
+<p class="loi-error" id="loiError"></p>
+<div class="loi-success" id="loiSuccess" aria-live="polite"><h3>Thank you. We've received your details.</h3><p id="loiSuccessText">Your requirement has been recorded. We'll review it and get back to you shortly.</p></div>
+</div>
+</form>
+</div>
+</section>
+<section class="cta"><div class="site-wrap cta-inner"><div><p class="eyebrow">No predefined package</p><h2>You bring the problem.<br>We'll work from there.</h2></div><div><p>Let's start with a detailed discussion about your business.</p><a class="button" href="mailto:hello@tevio.in">EMAIL TEVIO <span>→</span></a></div></div></section>
+</main>
+<footer class="site-footer"><div class="site-wrap"><div class="footer-row"><a class="footer-logo" href="index.html"><img src="/logo-wordmark-transparent.png" alt="Tevio"></a><div class="footer-contact"><span>+91 99586 30602</span><span>hello@tevio.in</span><a href="privacy-policy.html">Privacy</a></div></div><div class="footer-copy">© 2026 Tevio. All rights reserved.</div></div></footer>
+<script>
+function toggleSiteMenu(){const n=document.getElementById('siteLinks'),b=document.querySelector('.site-menu');n.classList.toggle('open');b.setAttribute('aria-expanded',n.classList.contains('open'))}
+const form=document.getElementById('loiForm');
+const error=document.getElementById('loiError');
+const success=document.getElementById('loiSuccess');
+form.addEventListener('submit',function(e){
+ e.preventDefault(); error.style.display='none';
+ if(!form.checkValidity()){form.reportValidity();return;}
+ const categories=[...form.querySelectorAll('input[name="category"]:checked')].map(x=>x.value);
+ if(!categories.length){error.textContent='Please select at least one area where Tevio can help.';error.style.display='block';return;}
+ error.textContent='The form is ready, but the secure submission connection has not been configured yet.';error.style.display='block';
+});
+</script>
+</body>
+</html>
