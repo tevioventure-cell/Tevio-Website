@@ -18,106 +18,17 @@
   <link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/shadows.css">
   <link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/styles.css">
   <script src="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/_ds_bundle.js"></script>
-  <style>
-    body{margin:0;background:var(--surface-page);}
-    a{color:var(--text-link);text-decoration:none;}
-    a:hover{color:var(--text-link-hover);text-decoration:underline;}
-    .container{max-width:var(--container-max);margin:0 auto;padding:0 var(--space-6);}
-  </style>
+  <style>body{margin:0;background:var(--surface-page);}a{color:var(--text-link);text-decoration:none;}a:hover{color:var(--text-link-hover);text-decoration:underline;}.container{max-width:var(--container-max);margin:0 auto;padding:0 var(--space-6);}</style>
 </helmet>
-
 <div style="font-family:var(--font-body);color:var(--text-primary);background:var(--surface-page);">
-
-  <div>
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;height:88px;">
-      <a href="index.html"><img src="assets/logo-wordmark-transparent.png" alt="Tevio" style="height:30px;"></a>
-      <div style="display:flex;align-items:center;gap:var(--space-8);">
-        <a href="features.html" style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-base);color:var(--text-primary);">Product</a>
-        <a href="pricing.html" style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-base);color:var(--text-primary);">Pricing</a>
-        <a href="about.html" style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-base);color:var(--text-primary);">About</a>
-        <div style="--radius-md:2px;display:inline-flex;">
-          <x-import component-from-global-scope="TevioDesignSystem_809dac.Button" hint-size="140px,44px" variant="primary">Get Early Access</x-import>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:var(--surface-page);">
-    <div class="container" style="padding:160px var(--space-6) 96px;text-align:center;">
-      <h1 style="font-family:'Manrope',var(--font-display);font-size:56px;line-height:1.15;margin:0 auto var(--space-10);font-weight:800;letter-spacing:-0.02em;">How can we help?</h1>
-      <div style="max-width:480px;margin:0 auto;">
-        <x-import component-from-global-scope="TevioDesignSystem_809dac.Input" hint-size="100%,52px" placeholder="Search articles"></x-import>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:var(--surface-sunken);">
-    <div class="container" style="padding:0 var(--space-6) 200px;">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-8);max-width:1000px;margin:0 auto;">
-        <sc-for list="{{ categories }}" as="c" hint-placeholder-count="3">
-          <x-import component-from-global-scope="TevioDesignSystem_809dac.Card" hint-size="100%,220px" padding="28px">
-            <h3 style="font-family:'Manrope',var(--font-display);font-size:20px;font-weight:700;margin:0 0 var(--space-4);">{{ c.title }}</h3>
-            <div style="display:flex;flex-direction:column;gap:var(--space-2);">
-              <sc-for list="{{ c.articles }}" as="a" hint-placeholder-count="3">
-                <a href="#" style="font-family:'Inter',var(--font-body);font-size:15px;color:var(--text-secondary);">{{ a }}</a>
-              </sc-for>
-            </div>
-          </x-import>
-        </sc-for>
-      </div>
-    </div>
-  </div>
-
-  <div style="border-top:1px solid var(--border-subtle);">
-    <div class="container" style="padding:80px var(--space-6) var(--space-10);">
-      <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--space-12);margin-bottom:64px;">
-        <div>
-          <img src="assets/logo-wordmark-transparent.png" alt="Tevio" style="height:26px;">
-          <p style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);line-height:1.5;max-width:260px;margin:var(--space-4) 0 0;">The AI business manager for fitness businesses.</p>
-        </div>
-        <sc-for list="{{ footerColumns }}" as="col" hint-placeholder-count="3">
-          <div>
-            <span style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-sm);color:var(--text-primary);">{{ col.title }}</span>
-            <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-5);">
-              <sc-for list="{{ col.links }}" as="l" hint-placeholder-count="3">
-                <a href="{{ l.href }}" style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);">{{ l.label }}</a>
-              </sc-for>
-            </div>
-          </div>
-        </sc-for>
-      </div>
-      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-4);padding-top:var(--space-8);border-top:1px solid var(--border-subtle);">
-        <span style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);">© 2026 Tevio</span>
-        <div style="display:flex;align-items:center;gap:var(--space-5);">
-          <a href="#" aria-label="LinkedIn" style="display:flex;align-items:center;"><img src="https://unpkg.com/lucide-static@0.400.0/icons/linkedin.svg" alt="LinkedIn" style="width:18px;height:18px;opacity:0.55;"></a>
-          <a href="#" aria-label="Instagram" style="display:flex;align-items:center;"><img src="https://unpkg.com/lucide-static@0.400.0/icons/instagram.svg" alt="Instagram" style="width:18px;height:18px;opacity:0.55;"></a>
-          <a href="#" aria-label="Twitter" style="display:flex;align-items:center;"><img src="https://unpkg.com/lucide-static@0.400.0/icons/twitter.svg" alt="Twitter" style="width:18px;height:18px;opacity:0.55;"></a>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <div><div class="container" style="display:flex;align-items:center;justify-content:space-between;height:88px;"><a href="index.html"><img src="/logo-wordmark-transparent.png" alt="Tevio" style="height:30px;"></a><div style="display:flex;align-items:center;gap:var(--space-8);"><a href="features.html" style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-base);color:var(--text-primary);">Product</a><a href="pricing.html" style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-base);color:var(--text-primary);">Pricing</a><a href="about.html" style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-base);color:var(--text-primary);">About</a><div style="--radius-md:2px;display:inline-flex;"><x-import component-from-global-scope="TevioDesignSystem_809dac.Button" hint-size="140px,44px" variant="primary">Get Early Access</x-import></div></div></div></div>
+  <div style="background:var(--surface-page);"><div class="container" style="padding:160px var(--space-6) 96px;text-align:center;"><h1 style="font-family:'Manrope',var(--font-display);font-size:56px;line-height:1.15;margin:0 auto var(--space-10);font-weight:800;letter-spacing:-0.02em;">How can we help?</h1><div style="max-width:480px;margin:0 auto;"><x-import component-from-global-scope="TevioDesignSystem_809dac.Input" hint-size="100%,52px" placeholder="Search articles"></x-import></div></div></div>
+  <div style="background:var(--surface-sunken);"><div class="container" style="padding:0 var(--space-6) 200px;"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-8);max-width:1000px;margin:0 auto;"><sc-for list="{{ categories }}" as="c" hint-placeholder-count="3"><x-import component-from-global-scope="TevioDesignSystem_809dac.Card" hint-size="100%,220px" padding="28px"><h3 style="font-family:'Manrope',var(--font-display);font-size:20px;font-weight:700;margin:0 0 var(--space-4);">{{ c.title }}</h3><div style="display:flex;flex-direction:column;gap:var(--space-2);"><sc-for list="{{ c.articles }}" as="a" hint-placeholder-count="3"><a href="#" style="font-family:'Inter',var(--font-body);font-size:15px;color:var(--text-secondary);">{{ a }}</a></sc-for></div></x-import></sc-for></div></div></div>
+  <div style="border-top:1px solid var(--border-subtle);"><div class="container" style="padding:80px var(--space-6) var(--space-10);"><div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--space-12);margin-bottom:64px;"><div><img src="/logo-wordmark-transparent.png" alt="Tevio" style="height:26px;"><p style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);line-height:1.5;max-width:260px;margin:var(--space-4) 0 0;">The AI business manager for fitness businesses.</p></div><sc-for list="{{ footerColumns }}" as="col" hint-placeholder-count="3"><div><span style="font-family:'Manrope',var(--font-display);font-weight:700;font-size:var(--text-sm);color:var(--text-primary);">{{ col.title }}</span><div style="display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-5);"><sc-for list="{{ col.links }}" as="l" hint-placeholder-count="3"><a href="{{ l.href }}" style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);">{{ l.label }}</a></sc-for></div></div></sc-for></div><div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-4);padding-top:var(--space-8);border-top:1px solid var(--border-subtle);"><span style="font-family:'Inter',var(--font-body);font-size:var(--text-sm);color:var(--text-tertiary);">© 2026 Tevio</span><div style="display:flex;align-items:center;gap:var(--space-5);"><a href="#" aria-label="LinkedIn" style="display:flex;align-items:center;"><img src="https://unpkg.com/lucide-static@0.400.0/icons/linkedin.svg" alt="LinkedIn" style="width:18px;height:18px;opacity:0.55;"></a><a href="#" aria-label="Instagram" style="display:flex;align-items:center;"><img src="https://unpkg.com/lucide-static@0.400.0/icons/instagram.svg" alt="Instagram" style="width:18px;height:18px;opacity:0.55;"></a><a href="#" aria-label="Twitter" style="display:flex;align-items:center;"><img src="https://unpkg.com/lucide-static@0.400.0/icons/twitter.svg" alt="Twitter" style="width:18px;height:18px;opacity:0.55;"></a></div></div></div></div>
 </div>
-
 </x-dc>
 <script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      categories: [
-        { title: "Getting started", articles: ["Connecting your first tool", "Setting up your daily brief", "Inviting your team"] },
-        { title: "Integrations", articles: ["Supported CRMs", "Billing software setup", "WhatsApp connection"] },
-        { title: "Billing", articles: ["Plans and pricing", "Changing your plan", "Invoices and receipts"] }
-      ],
-      footerColumns: [
-        { title: "Product", links: [{ label: "Features", href: "Features.dc.html" }, { label: "Pricing", href: "Pricing.dc.html" }] },
-        { title: "Company", links: [{ label: "About", href: "About.dc.html" }, { label: "Contact", href: "Contact.dc.html" }] },
-        { title: "Resources", links: [{ label: "Blog", href: "Blog.dc.html" }, { label: "Help center", href: "Help Center.dc.html" }, { label: "Privacy", href: "Privacy Policy.dc.html" }] }
-      ]
-    };
-  }
-}
-
+class Component extends DCLogic { renderVals() { return { categories: [ { title: "Getting started", articles: ["Connecting your first tool", "Setting up your daily brief", "Inviting your team"] }, { title: "Integrations", articles: ["Supported CRMs", "Billing software setup", "WhatsApp connection"] }, { title: "Billing", articles: ["Plans and pricing", "Changing your plan", "Invoices and receipts"] } ], footerColumns: [ { title: "Product", links: [{ label: "Features", href: "Features.dc.html" }, { label: "Pricing", href: "Pricing.dc.html" }] }, { title: "Company", links: [{ label: "About", href: "About.dc.html" }, { label: "Contact", href: "Contact.dc.html" }] }, { title: "Resources", links: [{ label: "Blog", href: "Blog.dc.html" }, { label: "Help center", href: "Help Center.dc.html" }, { label: "Privacy", href: "Privacy Policy.dc.html" }] } ] }; } }
 </script>
 </body>
 </html>
