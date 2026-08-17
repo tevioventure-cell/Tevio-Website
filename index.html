@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Tevio — Experience & Business Solutions. Business consulting, process excellence, AI, automation and technology implementation for growing businesses.">
 <script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
 <link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/tokens/fonts.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -19,25 +16,178 @@
 <link rel="stylesheet" href="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/styles.css">
 <script src="_ds/tevio-design-system-809dac14-1a24-47b2-b864-9c6145e90cb0/_ds_bundle.js"></script>
 <style>
-body{margin:0;background:var(--surface-page);overflow-x:hidden}a{color:var(--text-link);text-decoration:none}a:hover{color:var(--text-link-hover)}.container{max-width:var(--container-max);margin:0 auto;padding:0 var(--space-6)}
-.mono-photo{filter:grayscale(1);transition:filter .5s ease,transform .8s cubic-bezier(.2,.7,.2,1)}.mono-photo:hover{filter:grayscale(.65);transform:scale(1.015)}.reveal{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}.delay-1{animation-delay:.1s}.delay-2{animation-delay:.2s}.delay-3{animation-delay:.3s}.marquee{animation:marquee 30s linear infinite}.line-arrow{transition:transform .25s ease}.cta:hover .line-arrow{transform:translateX(6px)}
-@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media(max-width:800px){.nav-links a:not(.primary){display:none!important}.hero-grid,.experience-grid{grid-template-columns:1fr!important}.hero-copy{padding:90px 0 50px!important}.hero-image{min-height:430px!important}.hero-title{font-size:48px!important}.section-title{font-size:40px!important}.process-grid{grid-template-columns:1fr 1fr!important}.problem-grid{grid-template-columns:1fr 1fr!important}.experience-grid{gap:60px!important}}
-@media(max-width:520px){.hero-title{font-size:39px!important}.process-grid,.problem-grid{grid-template-columns:1fr!important}.container{padding-left:22px!important;padding-right:22px!important}.hero-image{min-height:330px!important}.cap-item{min-width:145px!important}}
+:root{--black:#0a0a0a;--soft:#f7f7f5;--line:rgba(10,10,10,.12)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--surface-page);color:var(--text-primary);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1180px,calc(100% - 64px));margin:auto}
+.display{font-family:Manrope,var(--font-display),sans-serif}
+.nav{height:84px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{display:block}.logo img{display:block;width:auto;height:31px}
+.nav-links{display:flex;align-items:center;gap:34px;font:600 13px Manrope,sans-serif}
+.nav-links a{transition:opacity .25s ease}.nav-links a:hover{opacity:.55}
+.nav-cta{background:var(--black);color:#fff;padding:13px 18px;font-size:12px;letter-spacing:.02em}
+.menu{display:none;border:0;background:none;padding:8px;font-size:22px;cursor:pointer}
+.hero{min-height:calc(100vh - 84px);display:flex;align-items:center;padding:120px 0 150px}
+.hero-inner{max-width:1080px}
+.eyebrow{font:700 12px Manrope,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--text-tertiary);margin:0 0 34px}
+h1{font:800 clamp(52px,7.2vw,104px)/.98 Manrope,sans-serif;letter-spacing:-.065em;margin:0;max-width:1080px}
+.hero-sub{font:400 20px/1.65 Inter,sans-serif;color:var(--text-secondary);max-width:650px;margin:42px 0 0}
+.actions{display:flex;gap:28px;align-items:center;margin-top:48px}
+.primary{display:inline-flex;align-items:center;gap:15px;background:var(--black);color:#fff;padding:17px 21px;font:700 12px Manrope,sans-serif;letter-spacing:.02em;transition:transform .25s ease,background .25s ease}
+.primary:hover{transform:translateY(-2px);background:#222}.arrow{font-size:17px;line-height:0;transition:transform .25s ease}.primary:hover .arrow{transform:translateX(5px)}
+.text-link{font:700 12px Manrope,sans-serif;border-bottom:1px solid var(--black);padding:5px 0}
+.statement{padding:210px 0;background:var(--soft)}
+.statement-inner{max-width:1000px}
+.statement h2{font:700 clamp(42px,5.5vw,72px)/1.08 Manrope,sans-serif;letter-spacing:-.055em;margin:0}
+.statement p{font:400 20px/1.7 Inter,sans-serif;color:var(--text-secondary);max-width:650px;margin:42px 0 0}
+.experience{padding:220px 0}
+.experience-grid{display:grid;grid-template-columns:280px 1fr;gap:130px;align-items:start}
+.big-number{font:800 118px/.9 Manrope,sans-serif;letter-spacing:-.07em;margin:0}
+.number-label{font:500 14px/1.5 Inter,sans-serif;color:var(--text-secondary);max-width:170px;margin-top:20px}
+.experience h2{font:700 clamp(40px,4.5vw,62px)/1.1 Manrope,sans-serif;letter-spacing:-.045em;margin:0;max-width:720px}
+.experience-copy{font:400 18px/1.75 Inter,sans-serif;color:var(--text-secondary);max-width:680px;margin:32px 0 0}
+.divider{height:1px;background:var(--line);margin-top:75px}
+.capabilities{padding:210px 0;background:var(--black);color:#fff}
+.cap-head{display:flex;justify-content:space-between;gap:50px;align-items:end;margin-bottom:90px}.cap-head h2{font:700 clamp(42px,5vw,66px)/1.05 Manrope,sans-serif;letter-spacing:-.055em;margin:0;max-width:700px}.cap-head p{font:400 16px/1.6 Inter,sans-serif;opacity:.62;max-width:280px;margin:0}
+.cap-list{border-top:1px solid rgba(255,255,255,.2)}
+.cap-row{display:grid;grid-template-columns:70px 1fr 90px;align-items:center;padding:28px 0;border-bottom:1px solid rgba(255,255,255,.2);transition:padding .3s ease}
+.cap-row:hover{padding-left:12px;padding-right:12px}
+.cap-no{font:600 11px Manrope,sans-serif;opacity:.45}.cap-name{font:600 clamp(24px,3vw,38px)/1.1 Manrope,sans-serif;letter-spacing:-.03em}.cap-arrow{text-align:right;font-size:20px;opacity:.55}
+.method{padding:210px 0}
+.method-head{max-width:760px}.method-head h2{font:700 clamp(42px,5.3vw,68px)/1.06 Manrope,sans-serif;letter-spacing:-.055em;margin:0}.method-head p{font:400 18px/1.7 Inter,sans-serif;color:var(--text-secondary);max-width:600px;margin:32px 0 0}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);margin-top:110px;border-top:1px solid var(--black)}
+.step{padding:27px 22px 0 0;border-right:1px solid var(--line);min-height:210px}.step:not(:first-child){padding-left:22px}.step:last-child{border-right:0}.step-no{font:700 11px Manrope,sans-serif;color:var(--text-tertiary)}.step h3{font:700 21px Manrope,sans-serif;margin:25px 0 12px}.step p{font:400 14px/1.6 Inter,sans-serif;color:var(--text-secondary);margin:0;max-width:180px}
+.problem{padding:210px 0;background:var(--soft)}.problem h2{font:700 clamp(42px,5vw,66px)/1.07 Manrope,sans-serif;letter-spacing:-.055em;margin:0;max-width:760px}.problem-list{margin-top:95px;border-top:1px solid var(--line)}.problem-row{display:grid;grid-template-columns:70px 1fr 1fr;gap:30px;padding:34px 0;border-bottom:1px solid var(--line);align-items:center}.problem-row .no{font:700 11px Manrope,sans-serif;color:var(--text-tertiary)}.problem-row strong{font:700 22px Manrope,sans-serif}.problem-row span{font:400 15px/1.6 Inter,sans-serif;color:var(--text-secondary)}
+.final{padding:220px 0 190px}.final-inner{max-width:950px}.final h2{font:800 clamp(48px,6.8vw,92px)/1 Manrope,sans-serif;letter-spacing:-.065em;margin:0}.final p{font:400 19px/1.7 Inter,sans-serif;color:var(--text-secondary);max-width:520px;margin:36px 0 0}.final .primary{margin-top:44px}
+footer{border-top:1px solid var(--line);padding:34px 0 45px}.footer-inner{display:flex;justify-content:space-between;gap:30px;align-items:end}.footer-brand img{height:28px}.footer-contact{display:flex;gap:40px;font:500 13px Inter,sans-serif;color:var(--text-secondary)}.footer-copy{font:400 12px Inter,sans-serif;color:var(--text-tertiary)}
+.reveal{opacity:0;transform:translateY(18px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}.d1{animation-delay:.08s}.d2{animation-delay:.16s}.d3{animation-delay:.24s}
+@keyframes rise{to{opacity:1;transform:none}}
+@media(max-width:900px){.wrap{width:min(100% - 44px,700px)}.nav{height:76px}.nav-links{display:none}.menu{display:block}.nav-links.open{position:absolute;display:flex;flex-direction:column;align-items:flex-start;gap:0;top:76px;left:0;right:0;padding:20px 22px 28px;background:#fff;border-bottom:1px solid var(--line);z-index:10}.nav-links.open a{padding:15px 0;width:100%}.nav-links.open .nav-cta{padding:14px 18px;width:auto;margin-top:8px}.hero{min-height:auto;padding:115px 0 155px}.hero-sub{font-size:18px}.statement,.experience,.capabilities,.method,.problem{padding:150px 0}.experience-grid{grid-template-columns:1fr;gap:70px}.big-number{font-size:100px}.steps{grid-template-columns:1fr 1fr}.step{border-bottom:1px solid var(--line);min-height:190px}.step:nth-child(2n){border-right:0;padding-left:22px}.cap-head{display:block}.cap-head p{margin-top:28px}.problem-row{grid-template-columns:55px 1fr}.problem-row span{grid-column:2}.footer-inner{align-items:flex-start;flex-direction:column}.footer-contact{flex-wrap:wrap;gap:16px 28px}}
+@media(max-width:560px){.wrap{width:calc(100% - 40px)}.logo img{height:27px}.hero{padding:92px 0 125px}.eyebrow{font-size:10px;margin-bottom:25px}h1{font-size:48px;letter-spacing:-.055em}.hero-sub{font-size:17px;margin-top:30px}.actions{align-items:flex-start;flex-direction:column;gap:20px;margin-top:36px}.statement,.experience,.capabilities,.method,.problem{padding:120px 0}.statement h2,.experience h2,.cap-head h2,.method-head h2,.problem h2{font-size:42px}.statement p{font-size:17px;margin-top:30px}.big-number{font-size:86px}.experience-copy{font-size:16px}.cap-head{margin-bottom:60px}.cap-row{grid-template-columns:40px 1fr 30px;padding:23px 0}.cap-row:hover{padding-left:0;padding-right:0}.cap-name{font-size:23px}.steps{grid-template-columns:1fr;margin-top:70px}.step,.step:nth-child(2n){border-right:0;padding:25px 0;min-height:0}.problem-list{margin-top:65px}.problem-row{grid-template-columns:38px 1fr;gap:14px;padding:28px 0}.problem-row strong{font-size:19px}.problem-row span{grid-column:2;font-size:14px}.final{padding:135px 0 125px}.final h2{font-size:49px}.final p{font-size:17px}.footer-contact{flex-direction:column;gap:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{animation:none;opacity:1;transform:none}.cap-row{transition:none}.primary{transition:none}}
 </style>
-</helmet>
-<div style="font-family:var(--font-body);color:var(--text-primary);background:var(--surface-page)">
-<header style="height:88px;border-bottom:1px solid var(--border-subtle);background:rgba(255,255,255,.94);position:relative;z-index:2"><div class="container" style="height:100%;display:flex;align-items:center;justify-content:space-between"><a href="index.html"><img src="assets/logo-wordmark-transparent.png" alt="Tevio" style="height:30px"></a><nav class="nav-links" style="display:flex;align-items:center;gap:var(--space-8)"><a href="#what-we-solve" style="font-family:'Manrope';font-weight:700;font-size:var(--text-base);color:var(--text-primary)">What We Solve</a><a href="features.html" style="font-family:'Manrope';font-weight:700;font-size:var(--text-base);color:var(--text-primary)">Solutions</a><a href="about.html" style="font-family:'Manrope';font-weight:700;font-size:var(--text-base);color:var(--text-primary)">About</a><a class="primary" href="contact.html" style="background:var(--surface-inverse);color:var(--text-inverse);padding:13px 20px;font-family:'Manrope';font-size:13px;font-weight:800">DISCUSS YOUR BUSINESS</a></nav></div></header>
-<section class="hero-grid" style="display:grid;grid-template-columns:1fr 1.08fr;min-height:650px;border-bottom:1px solid var(--border-subtle)"><div class="hero-copy container" style="padding-top:125px;padding-bottom:110px;display:flex;flex-direction:column;justify-content:center"><p class="reveal" style="font-family:'Manrope';font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-tertiary);font-weight:800;margin:0 0 26px">Experience &amp; Business Solutions</p><h1 class="hero-title reveal delay-1" style="font-family:'Manrope';font-size:67px;line-height:1.06;letter-spacing:-.045em;font-weight:800;max-width:720px;margin:0">Business problems don’t need more software.<br><span style="font-weight:500">They need better solutions.</span></h1><p class="reveal delay-2" style="font-family:'Inter';font-size:18px;line-height:1.65;color:var(--text-secondary);max-width:570px;margin:30px 0 0">Tevio combines 15+ years of business experience with process excellence, AI and automation to understand what is not working, design what should, and make it happen.</p><div class="reveal delay-3" style="display:flex;gap:14px;align-items:center;margin-top:42px;flex-wrap:wrap"><a class="cta" href="contact.html" style="background:var(--surface-inverse);color:var(--text-inverse);padding:16px 22px;font-family:'Manrope';font-size:13px;font-weight:800">DISCUSS YOUR BUSINESS <span class="line-arrow" style="display:inline-block;margin-left:10px">→</span></a><a href="#how-we-work" style="padding:15px 5px;font-family:'Manrope';font-size:13px;font-weight:800;color:var(--text-primary);border-bottom:1px solid var(--border-strong)">HOW WE WORK</a></div></div><div class="hero-image" style="min-height:650px;background-image:linear-gradient(90deg,var(--surface-page) 0%,rgba(255,255,255,0) 30%),url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=85');background-size:cover;background-position:center;filter:grayscale(1)"></div></section>
-<section id="what-we-solve" style="padding:170px 0;background:var(--surface-page)"><div class="container"><div style="max-width:780px;margin:0 auto;text-align:center"><p style="font-family:'Manrope';font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-tertiary);font-weight:800;margin:0 0 22px">Start with the problem</p><h2 class="section-title" style="font-family:'Manrope';font-size:53px;line-height:1.12;letter-spacing:-.035em;margin:0;font-weight:700">We start with the problem.<br>Not the technology.</h2><p style="font-family:'Inter';font-size:18px;line-height:1.7;color:var(--text-secondary);max-width:650px;margin:28px auto 0">Your business may need consultancy, process improvement, automation, integration, AI—or none of them. We find that out first.</p></div><div class="problem-grid" style="display:grid;grid-template-columns:repeat(4,1fr);max-width:1120px;margin:100px auto 0;border-top:1px solid var(--border-subtle);border-left:1px solid var(--border-subtle)"><div style="padding:35px 26px;border-right:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)"><span style="font-family:'Manrope';font-weight:800;font-size:12px;color:var(--text-tertiary)">01</span><h3 style="font-family:'Manrope';font-size:21px;margin:20px 0 10px">Sales &amp; growth</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Find leakage, align the sales process and automate follow-up.</p></div><div style="padding:35px 26px;border-right:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)"><span style="font-family:'Manrope';font-weight:800;font-size:12px;color:var(--text-tertiary)">02</span><h3 style="font-family:'Manrope';font-size:21px;margin:20px 0 10px">Operations</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Remove friction, reduce manual work and improve execution.</p></div><div style="padding:35px 26px;border-right:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)"><span style="font-family:'Manrope';font-weight:800;font-size:12px;color:var(--text-tertiary)">03</span><h3 style="font-family:'Manrope';font-size:21px;margin:20px 0 10px">Data &amp; decisions</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Turn scattered information into priorities and useful actions.</p></div><div style="padding:35px 26px;border-right:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)"><span style="font-family:'Manrope';font-weight:800;font-size:12px;color:var(--text-tertiary)">04</span><h3 style="font-family:'Manrope';font-size:21px;margin:20px 0 10px">Technology</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Use AI and automation where they create measurable value.</p></div></div></div></section>
-<section style="padding:0 0 175px;background:var(--surface-page)"><div class="container"><div class="experience-grid" style="display:grid;grid-template-columns:1.05fr .95fr;gap:100px;max-width:1120px;margin:0 auto;align-items:center"><div style="height:440px;overflow:hidden"><img class="mono-photo" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85" alt="Business discussion" style="width:100%;height:100%;object-fit:cover"></div><div><p style="font-family:'Manrope';font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-tertiary);font-weight:800;margin:0 0 20px">Our experience</p><div style="font-family:'Manrope';font-size:84px;line-height:1;font-weight:800;letter-spacing:-.06em">15+</div><p style="font-family:'Manrope';font-size:20px;font-weight:700;margin:12px 0 30px">years across startups and large-scale organisations.</p><p style="font-family:'Inter';font-size:17px;line-height:1.7;color:var(--text-secondary);margin:0">We've built, scaled and transformed businesses. We've dealt with people, processes, sales, operations, technology and the gaps between them.</p><p style="font-family:'Inter';font-size:17px;line-height:1.7;color:var(--text-secondary);margin:18px 0 0">That experience matters because the right answer is rarely just another tool.</p></div></div></div></section>
-<section id="how-we-work" style="padding:175px 0;background:var(--surface-sunken)"><div class="container"><div style="max-width:760px;margin:0 auto;text-align:center"><p style="font-family:'Manrope';font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-tertiary);font-weight:800;margin:0 0 22px">Our approach</p><h2 class="section-title" style="font-family:'Manrope';font-size:53px;line-height:1.12;letter-spacing:-.035em;margin:0;font-weight:700">From business problem<br>to working solution.</h2></div><div class="process-grid" style="display:grid;grid-template-columns:repeat(5,1fr);max-width:1120px;margin:100px auto 0"><div style="padding:28px 24px 0 0;border-top:1px solid var(--border-strong)"><span style="font-family:'Manrope';font-weight:800;font-size:12px">01</span><h3 style="font-family:'Manrope';font-size:21px;margin:18px 0 9px">Understand</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Business, people, process and goals.</p></div><div style="padding:28px 24px 0;border-top:1px solid var(--border-strong)"><span style="font-family:'Manrope';font-weight:800;font-size:12px">02</span><h3 style="font-family:'Manrope';font-size:21px;margin:18px 0 9px">Diagnose</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Find the gaps and priorities.</p></div><div style="padding:28px 24px 0;border-top:1px solid var(--border-strong)"><span style="font-family:'Manrope';font-weight:800;font-size:12px">03</span><h3 style="font-family:'Manrope';font-size:21px;margin:18px 0 9px">Design</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Create the practical solution.</p></div><div style="padding:28px 24px 0;border-top:1px solid var(--border-strong)"><span style="font-family:'Manrope';font-weight:800;font-size:12px">04</span><h3 style="font-family:'Manrope';font-size:21px;margin:18px 0 9px">Deploy</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Implement process and technology.</p></div><div style="padding:28px 0 0 24px;border-top:1px solid var(--border-strong)"><span style="font-family:'Manrope';font-weight:800;font-size:12px">05</span><h3 style="font-family:'Manrope';font-size:21px;margin:18px 0 9px">Improve</h3><p style="font-family:'Inter';font-size:14px;line-height:1.6;color:var(--text-secondary);margin:0">Measure and continuously optimize.</p></div></div></div></section>
-<section id="solutions" style="padding:165px 0;background:var(--surface-page);overflow:hidden"><div class="container"><div style="text-align:center;max-width:760px;margin:0 auto"><p style="font-family:'Manrope';font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-tertiary);font-weight:800;margin:0 0 22px">What we build around your business</p><h2 class="section-title" style="font-family:'Manrope';font-size:53px;line-height:1.12;letter-spacing:-.035em;margin:0;font-weight:700">Capabilities are tools.<br>Outcomes are the goal.</h2></div></div><div style="margin-top:90px;border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);white-space:nowrap"><div class="marquee" style="display:flex;width:max-content"><div style="display:flex"><span class="cap-item">AI Agents</span><span class="cap-item">AI Automation</span><span class="cap-item">Business Workflows</span><span class="cap-item">Sales Alignment</span><span class="cap-item">Process Excellence</span><span class="cap-item">WhatsApp Automation</span><span class="cap-item">API Integrations</span><span class="cap-item">Cloud Telephony</span><span class="cap-item">Social Automation</span><span class="cap-item">CRM &amp; Data</span></div><div style="display:flex"><span class="cap-item">AI Agents</span><span class="cap-item">AI Automation</span><span class="cap-item">Business Workflows</span><span class="cap-item">Sales Alignment</span><span class="cap-item">Process Excellence</span><span class="cap-item">WhatsApp Automation</span><span class="cap-item">API Integrations</span><span class="cap-item">Cloud Telephony</span><span class="cap-item">Social Automation</span><span class="cap-item">CRM &amp; Data</span></div></div></div></section>
-<section style="padding:0 0 170px;background:var(--surface-page)"><div class="container"><div style="display:grid;grid-template-columns:1fr 1fr;gap:50px;max-width:1120px;margin:0 auto;align-items:stretch"><div style="min-height:420px;overflow:hidden"><img class="mono-photo" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" alt="Modern business environment" style="width:100%;height:100%;object-fit:cover"></div><div style="padding:45px 0 45px 30px;display:flex;flex-direction:column;justify-content:center"><p style="font-family:'Manrope';font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-tertiary);font-weight:800;margin:0 0 22px">Sound familiar?</p><div><div style="padding:19px 0;border-top:1px solid var(--border-subtle);font-family:'Manrope';font-size:19px;font-weight:700">Leads are being lost.</div><div style="padding:19px 0;border-top:1px solid var(--border-subtle);font-family:'Manrope';font-size:19px;font-weight:700">Your team spends hours on repetitive work.</div><div style="padding:19px 0;border-top:1px solid var(--border-subtle);font-family:'Manrope';font-size:19px;font-weight:700">Your systems don't talk to each other.</div><div style="padding:19px 0;border-top:1px solid var(--border-subtle);font-family:'Manrope';font-size:19px;font-weight:700">You have data but no clear decisions.</div><div style="padding:19px 0;border-top:1px solid var(--border-subtle);font-family:'Manrope';font-size:19px;font-weight:700">You know AI can help, but don't know where to start.</div></div><a class="cta" href="contact.html" style="font-family:'Manrope';font-size:13px;font-weight:800;margin-top:28px;color:var(--text-primary)">LET'S SOLVE IT <span class="line-arrow" style="display:inline-block;margin-left:8px">→</span></a></div></div></div></section>
-<section style="padding:130px 0;background:var(--surface-inverse)"><div class="container"><div style="max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:60px;flex-wrap:wrap"><div><h2 style="font-family:'Manrope';font-size:48px;line-height:1.12;letter-spacing:-.035em;color:var(--text-inverse);margin:0;font-weight:700">You bring the business problem.<br>We'll work out the solution.</h2><p style="font-family:'Inter';font-size:16px;color:var(--text-inverse);opacity:.65;line-height:1.6;margin:22px 0 0">No fixed package. No product pitch. Just a detailed conversation.</p></div><a class="cta" href="contact.html" style="background:#fff;color:#111;padding:17px 23px;font-family:'Manrope';font-size:13px;font-weight:800;white-space:nowrap">DISCUSS YOUR BUSINESS <span class="line-arrow" style="display:inline-block;margin-left:10px">→</span></a></div></div></section>
-<footer style="border-top:1px solid var(--border-subtle)"><div class="container" style="padding:55px 0 35px"><div style="display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap"><div><img src="assets/logo-wordmark-transparent.png" alt="Tevio" style="height:27px"><p style="font-family:'Inter';font-size:13px;color:var(--text-tertiary);margin:12px 0 0">Experience &amp; Business Solutions.</p></div><div style="display:flex;gap:28px;font-family:'Inter';font-size:14px;color:var(--text-tertiary)"><a href="features.html">Solutions</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div style="font-family:'Inter';font-size:14px;color:var(--text-tertiary)">hello@tevio.in&nbsp;&nbsp;&nbsp; +91 99586 30602</div></div><div style="border-top:1px solid var(--border-subtle);margin-top:40px;padding-top:20px;font-family:'Inter';font-size:12px;color:var(--text-tertiary)">© 2026 Tevio</div></div></footer>
-</div>
-</x-dc>
-<script type="text/x-dc" data-dc-script>class Component extends DCLogic { renderVals(){ return {}; } }</script>
+</head>
+<body>
+<header class="wrap nav">
+  <a class="logo" href="index.html" aria-label="Tevio home"><img src="assets/logo-wordmark-transparent.png" alt="Tevio"></a>
+  <button class="menu" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
+  <nav class="nav-links" id="navLinks">
+    <a href="#why">Why Tevio</a>
+    <a href="#solutions">Solutions</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="nav-cta">DISCUSS YOUR BUSINESS</a>
+  </nav>
+</header>
+
+<main>
+<section class="wrap hero">
+  <div class="hero-inner">
+    <p class="eyebrow reveal">Experience &amp; Business Solutions</p>
+    <h1 class="reveal d1">Business problems<br>deserve better<br>solutions.</h1>
+    <p class="hero-sub reveal d2">Tevio brings 15+ years of experience across startups and large organisations to help businesses improve how they work — through better processes, smarter systems, AI and automation.</p>
+    <div class="actions reveal d3">
+      <a class="primary" href="contact.html">DISCUSS YOUR BUSINESS <span class="arrow">→</span></a>
+      <a class="text-link" href="#why">See how we think</a>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="statement">
+  <div class="wrap statement-inner">
+    <p class="eyebrow">The Tevio principle</p>
+    <h2>We don't start with technology.<br>We start with the problem.</h2>
+    <p>A business problem may need consultancy. It may need a process redesigned, a sales journey aligned, a workflow automated, systems connected or AI deployed. The tool comes after the understanding.</p>
+  </div>
+</section>
+
+<section class="experience">
+  <div class="wrap experience-grid">
+    <div>
+      <p class="eyebrow">Experience matters</p>
+      <p class="big-number">15+</p>
+      <p class="number-label">years of experience across startups and large-scale organisations.</p>
+    </div>
+    <div>
+      <h2>We've lived the problems we help solve.</h2>
+      <p class="experience-copy">We've built, scaled and transformed businesses. We've worked with people, processes, sales, operations, data and technology — and we've seen what happens when they don't work together.</p>
+      <p class="experience-copy">That experience changes the questions we ask, the solutions we recommend and the way we implement them.</p>
+      <div class="divider"></div>
+    </div>
+  </div>
+</section>
+
+<section id="solutions" class="capabilities">
+  <div class="wrap">
+    <div class="cap-head">
+      <h2>Whatever the problem,<br>we find the right lever.</h2>
+      <p>Technology is a means to an outcome. We use what makes sense for your business.</p>
+    </div>
+    <div class="cap-list">
+      <a class="cap-row" href="features.html"><span class="cap-no">01</span><span class="cap-name">Business &amp; Process Consulting</span><span class="cap-arrow">↗</span></a>
+      <a class="cap-row" href="features.html"><span class="cap-no">02</span><span class="cap-name">Sales Process Alignment</span><span class="cap-arrow">↗</span></a>
+      <a class="cap-row" href="features.html"><span class="cap-no">03</span><span class="cap-name">Process Optimization &amp; Excellence</span><span class="cap-arrow">↗</span></a>
+      <a class="cap-row" href="features.html"><span class="cap-no">04</span><span class="cap-name">AI Agents &amp; Automation</span><span class="cap-arrow">↗</span></a>
+      <a class="cap-row" href="features.html"><span class="cap-no">05</span><span class="cap-name">Workflows &amp; Integrations</span><span class="cap-arrow">↗</span></a>
+      <a class="cap-row" href="features.html"><span class="cap-no">06</span><span class="cap-name">WhatsApp &amp; Customer Automation</span><span class="cap-arrow">↗</span></a>
+      <a class="cap-row" href="features.html"><span class="cap-no">07</span><span class="cap-name">APIs &amp; Cloud Telephony</span><span class="cap-arrow">↗</span></a>
+      <a class="cap-row" href="features.html"><span class="cap-no">08</span><span class="cap-name">Data, Reporting &amp; Decision Systems</span><span class="cap-arrow">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="method">
+  <div class="wrap">
+    <div class="method-head">
+      <p class="eyebrow">How we work</p>
+      <h2>From business problem<br>to working solution.</h2>
+      <p>Consultation is only the beginning. We can stay with the problem through design, implementation and continuous improvement.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="step-no">01</span><h3>Understand</h3><p>Business, people, process and goals.</p></div>
+      <div class="step"><span class="step-no">02</span><h3>Diagnose</h3><p>Find the gaps, constraints and priorities.</p></div>
+      <div class="step"><span class="step-no">03</span><h3>Design</h3><p>Create the practical solution.</p></div>
+      <div class="step"><span class="step-no">04</span><h3>Deploy</h3><p>Implement process and technology.</p></div>
+      <div class="step"><span class="step-no">05</span><h3>Improve</h3><p>Measure, learn and keep improving.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="wrap">
+    <p class="eyebrow">Does this sound familiar?</p>
+    <h2>Something in the business<br>isn't working as well as it should.</h2>
+    <div class="problem-list">
+      <div class="problem-row"><span class="no">01</span><strong>Leads are being lost.</strong><span>Your sales process needs visibility, alignment or automation.</span></div>
+      <div class="problem-row"><span class="no">02</span><strong>Teams repeat manual work.</strong><span>There is a better workflow waiting to be designed.</span></div>
+      <div class="problem-row"><span class="no">03</span><strong>Your systems don't talk.</strong><span>Connect the tools you already use before replacing them.</span></div>
+      <div class="problem-row"><span class="no">04</span><strong>You have data, not decisions.</strong><span>Turn information into priorities, alerts and actions.</span></div>
+      <div class="problem-row"><span class="no">05</span><strong>You know AI can help.</strong><span>We'll identify where it can create practical business value.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap final">
+  <div class="final-inner">
+    <p class="eyebrow">Start with a conversation</p>
+    <h2>You bring the business problem.<br>We'll work out the solution.</h2>
+    <p>No fixed package. No technology pitch. Just a detailed discussion about your business and what could work better.</p>
+    <a class="primary" href="contact.html">DISCUSS YOUR BUSINESS <span class="arrow">→</span></a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-brand"><a href="index.html"><img src="assets/logo-wordmark-transparent.png" alt="Tevio"></a></div>
+    <div class="footer-contact"><span>+91 99586 30602</span><span>hello@tevio.in</span></div>
+    <div class="footer-copy">© 2026 Tevio. All rights reserved.</div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){const n=document.getElementById('navLinks');const b=document.querySelector('.menu');n.classList.toggle('open');b.setAttribute('aria-expanded',n.classList.contains('open'));}
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('navLinks').classList.remove('open');document.querySelector('.menu').setAttribute('aria-expanded','false')}));
+</script>
 </body>
 </html>
