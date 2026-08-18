@@ -1,5 +1,10 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/kriya-chat.js": {
+      "maxDuration": 60
+    }
+  },
   "rewrites": [
     { "source": "/favicon.ico", "destination": "/logo-wordmark-transparent.png" }
   ]
