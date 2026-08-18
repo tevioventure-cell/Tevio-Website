@@ -1,0 +1,3 @@
+Contact: mailto:hello@tevio.in
+Canonical: https://www.tevio.in/.well-known/security.txt
+Policy: https://www.tevio.in/privacy-policy.html
