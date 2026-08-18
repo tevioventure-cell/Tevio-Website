@@ -1,6 +1,5 @@
 {
   "rewrites": [
-    { "source": "/favicon.ico", "destination": "/logo-wordmark-transparent.png" },
-    { "source": "/api/kriya-chat", "destination": "/api/kriya-chat.js" }
+    { "source": "/favicon.ico", "destination": "/logo-wordmark-transparent.png" }
   ]
 }
