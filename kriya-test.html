@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KriyaOS Connection Test</title>
+<style>body{font-family:Arial,sans-serif;max-width:700px;margin:60px auto;padding:20px;color:#111}textarea{width:100%;min-height:100px;padding:12px;box-sizing:border-box}button{margin-top:12px;padding:12px 20px;background:#111;color:#fff;border:0;cursor:pointer}pre{white-space:pre-wrap;background:#f5f5f5;padding:16px;margin-top:20px;min-height:80px}</style>
+</head>
+<body>
+<h1>KriyaOS Connection Test</h1>
+<p>This is a private Preview-only technical test.</p>
+<textarea id="message" placeholder="Type a message, e.g. hi"></textarea>
+<br><button id="send">SEND</button>
+<pre id="result">Waiting for test...</pre>
+<script>
+const send=document.getElementById('send');
+const message=document.getElementById('message');
+const result=document.getElementById('result');
+send.onclick=async()=>{
+ const text=message.value.trim();
+ if(!text)return;
+ send.disabled=true; result.textContent='Calling KriyaOS...';
+ try{
+  const r=await fetch('/api/kriya/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:text})});
+  const data=await r.json();
+  result.textContent=JSON.stringify({status:r.status,response:data},null,2);
+ }catch(e){result.textContent='Browser error: '+e.message}
+ finally{send.disabled=false}
+};
+</script>
+</body>
+</html>
