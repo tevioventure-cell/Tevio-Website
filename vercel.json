@@ -1,5 +1,9 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     { "source": "/favicon.ico", "destination": "/logo-wordmark-transparent.png" }
+  ],
+  "routes": [
+    { "src": "/api/kriya-chat", "methods": ["POST"], "dest": "/api/kriya-chat.js" }
   ]
 }
