@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tevio — Business Manager Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../tokens/colors.css">
+<link rel="stylesheet" href="../../tokens/typography.css">
+<link rel="stylesheet" href="../../tokens/spacing.css">
+<link rel="stylesheet" href="../../tokens/radius.css">
+<link rel="stylesheet" href="../../tokens/shadows.css">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--surface-sunken);font-family:var(--font-body);color:var(--text-primary);display:flex;height:100vh;overflow:hidden}
+
+/* Sidebar */
+.sidebar{width:220px;flex-shrink:0;background:var(--navy-900);color:#fff;display:flex;flex-direction:column;padding:var(--space-5) 0}
+.sidebar-logo{padding:0 var(--space-5) var(--space-6);border-bottom:1px solid rgba(255,255,255,.1);font:var(--weight-bold) var(--text-lg)/1 var(--font-display);letter-spacing:-.02em}
+.sidebar-logo span{color:var(--navy-300)}
+.nav{padding:var(--space-4) 0;flex:1}
+.nav-item{display:flex;align-items:center;gap:var(--space-3);padding:10px var(--space-5);font:var(--weight-medium) var(--text-sm)/1 var(--font-body);color:rgba(255,255,255,.6);cursor:pointer;transition:background var(--duration-fast),color var(--duration-fast);border-left:2px solid transparent}
+.nav-item:hover{background:rgba(255,255,255,.06);color:#fff}
+.nav-item.active{background:rgba(255,255,255,.1);color:#fff;border-left-color:var(--navy-300)}
+.nav-section{padding:var(--space-5) var(--space-5) var(--space-2);font:var(--weight-semibold) var(--text-xs)/1 var(--font-body);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:rgba(255,255,255,.35)}
+.sidebar-footer{padding:var(--space-4) var(--space-5);border-top:1px solid rgba(255,255,255,.1);font:var(--weight-regular) var(--text-xs)/1.4 var(--font-body);color:rgba(255,255,255,.4)}
+
+/* Main */
+.main{flex:1;display:flex;flex-direction:column;overflow:hidden}
+.topbar{height:60px;background:var(--surface-card);border-bottom:1px solid var(--border-subtle);display:flex;align-items:center;justify-content:space-between;padding:0 var(--space-6);flex-shrink:0}
+.topbar-title{font:var(--weight-semibold) var(--text-md)/1 var(--font-body)}
+.topbar-actions{display:flex;gap:var(--space-3);align-items:center}
+.avatar{width:32px;height:32px;border-radius:50%;background:var(--navy-200);display:flex;align-items:center;justify-content:center;font:var(--weight-semibold) var(--text-xs)/1 var(--font-body);color:var(--navy-900)}
+.btn{display:inline-flex;align-items:center;gap:var(--space-2);padding:8px 16px;border-radius:var(--radius-md);font:var(--weight-semibold) var(--text-sm)/1 var(--font-body);cursor:pointer;border:0;transition:background var(--duration-fast)}
+.btn.primary{background:var(--accent-primary);color:#fff}
+.btn.ghost{background:transparent;color:var(--text-secondary);border:1px solid var(--border-default)}
+
+/* Content */
+.content{flex:1;overflow-y:auto;padding:var(--space-6)}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4);margin-bottom:var(--space-6)}
+.metric-card{background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-sm)}
+.metric-label{font:var(--weight-medium) var(--text-xs)/1 var(--font-body);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-tertiary);margin-bottom:var(--space-2)}
+.metric-value{font:var(--weight-bold) var(--text-2xl)/1 var(--font-body);color:var(--text-primary);margin-bottom:var(--space-1)}
+.metric-delta{font:var(--weight-regular) var(--text-xs)/1 var(--font-body);color:var(--text-tertiary)}
+.metric-delta.up{color:var(--success)}
+.metric-delta.down{color:var(--danger)}
+
+/* Table */
+.panel{background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
+.panel-header{display:flex;align-items:center;justify-content:space-between;padding:var(--space-4) var(--space-5);border-bottom:1px solid var(--border-subtle)}
+.panel-title{font:var(--weight-semibold) var(--text-md)/1 var(--font-body)}
+table{width:100%;border-collapse:collapse}
+th{padding:10px var(--space-5);text-align:left;font:var(--weight-semibold) var(--text-xs)/1 var(--font-body);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-tertiary);border-bottom:1px solid var(--border-subtle)}
+td{padding:14px var(--space-5);font:var(--weight-regular) var(--text-sm)/1 var(--font-body);color:var(--text-secondary);border-bottom:1px solid var(--border-subtle)}
+tr:last-child td{border-bottom:0}
+tr:hover td{background:var(--slate-50)}
+.badge{display:inline-flex;align-items:center;padding:3px 10px;border-radius:var(--radius-pill);font:var(--weight-medium) var(--text-xs)/1 var(--font-body);letter-spacing:var(--tracking-wide);text-transform:uppercase}
+.badge.success{background:var(--success-surface);color:var(--success)}
+.badge.warning{background:var(--warning-surface);color:var(--amber-600)}
+.badge.neutral{background:var(--slate-100);color:var(--text-secondary)}
+.badge.danger{background:var(--danger-surface);color:var(--danger)}
+</style>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-logo">te<span>v</span>io</div>
+  <div class="nav">
+    <div class="nav-section">Main</div>
+    <div class="nav-item active">📊 &nbsp;Dashboard</div>
+    <div class="nav-item">📋 &nbsp;Requests</div>
+    <div class="nav-item">🤖 &nbsp;AI Agents</div>
+    <div class="nav-item">⚙️ &nbsp;Processes</div>
+    <div class="nav-section">Reports</div>
+    <div class="nav-item">📈 &nbsp;Analytics</div>
+    <div class="nav-item">📂 &nbsp;Submissions</div>
+  </div>
+  <div class="sidebar-footer">Tevio Business Manager<br>Design System Demo</div>
+</nav>
+
+<div class="main">
+  <header class="topbar">
+    <span class="topbar-title">Business Dashboard</span>
+    <div class="topbar-actions">
+      <button class="btn ghost">Export</button>
+      <button class="btn primary">+ New Request</button>
+      <div class="avatar">AK</div>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="metrics">
+      <div class="metric-card">
+        <div class="metric-label">Active Requests</div>
+        <div class="metric-value">24</div>
+        <div class="metric-delta up">↑ 6 this week</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Resolved</div>
+        <div class="metric-value">138</div>
+        <div class="metric-delta">All time</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Avg Response</div>
+        <div class="metric-value">1.4d</div>
+        <div class="metric-delta up">↑ Faster than last month</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Agent Tasks</div>
+        <div class="metric-value">512</div>
+        <div class="metric-delta up">↑ 18% MoM</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">Recent Submissions</span>
+        <button class="btn ghost" style="padding:6px 12px;font-size:12px">View all</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Reference</th>
+            <th>Business</th>
+            <th>Area</th>
+            <th>Submitted</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-family:var(--font-mono);color:var(--text-tertiary)">TVO-4892</td>
+            <td style="color:var(--text-primary);font-weight:500">Meridian Health</td>
+            <td>Sales Process Alignment</td>
+            <td>Today, 10:42</td>
+            <td><span class="badge warning">Reviewing</span></td>
+          </tr>
+          <tr>
+            <td style="font-family:var(--font-mono);color:var(--text-tertiary)">TVO-4891</td>
+            <td style="color:var(--text-primary);font-weight:500">NovaTech Solutions</td>
+            <td>AI Automation</td>
+            <td>Yesterday</td>
+            <td><span class="badge success">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td style="font-family:var(--font-mono);color:var(--text-tertiary)">TVO-4890</td>
+            <td style="color:var(--text-primary);font-weight:500">Atlas Retail</td>
+            <td>Process Optimization</td>
+            <td>Aug 18</td>
+            <td><span class="badge neutral">Pending</span></td>
+          </tr>
+          <tr>
+            <td style="font-family:var(--font-mono);color:var(--text-tertiary)">TVO-4889</td>
+            <td style="color:var(--text-primary);font-weight:500">Vitara Clinics</td>
+            <td>API Integrations</td>
+            <td>Aug 17</td>
+            <td><span class="badge success">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td style="font-family:var(--font-mono);color:var(--text-tertiary)">TVO-4888</td>
+            <td style="color:var(--text-primary);font-weight:500">Greenline Logistics</td>
+            <td>Business Consulting</td>
+            <td>Aug 15</td>
+            <td><span class="badge danger">On Hold</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

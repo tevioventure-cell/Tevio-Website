@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens/colors.css">
+<link rel="stylesheet" href="../tokens/typography.css">
+<link rel="stylesheet" href="../tokens/spacing.css">
+<link rel="stylesheet" href="../tokens/radius.css">
+<link rel="stylesheet" href="../tokens/shadows.css">
+<style>body{margin:24px;background:var(--surface-sunken);font-family:var(--font-body);color:var(--text-primary)}</style>
+<title>Buttons</title>
+<style>
+.demo{display:flex;flex-direction:column;gap:var(--space-5);padding:var(--space-6)}
+.row{display:flex;gap:var(--space-4);align-items:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:var(--space-2);padding:12px 20px;border-radius:var(--radius-md);font:var(--weight-semibold) var(--text-sm)/1 var(--font-body);cursor:pointer;border:0;transition:background var(--duration-fast) var(--ease-standard),transform var(--duration-fast)}
+.btn:active{transform:scale(.97)}
+.btn.primary{background:var(--accent-primary);color:var(--text-inverse)}
+.btn.primary:hover{background:var(--accent-primary-hover)}
+.btn.secondary{background:transparent;color:var(--text-primary);border:1px solid var(--border-default)}
+.btn.secondary:hover{border-color:var(--border-strong);background:var(--slate-50)}
+.btn.ghost{background:transparent;color:var(--text-primary)}
+.btn.ghost:hover{background:var(--slate-100)}
+.btn.danger{background:var(--danger);color:var(--text-inverse)}
+.btn.danger:hover{background:var(--danger-hover)}
+.btn:disabled{opacity:.45;pointer-events:none}
+.btn.sm{padding:8px 14px;font-size:var(--text-xs)}
+.btn.lg{padding:16px 28px;font-size:var(--text-md)}
+label{font:var(--weight-medium) var(--text-xs)/1 var(--font-body);color:var(--text-tertiary);letter-spacing:var(--tracking-wide);text-transform:uppercase}
+</style></head><body>
+<div class="demo">
+  <label>Variants</label>
+  <div class="row">
+    <button class="btn primary">Primary</button>
+    <button class="btn secondary">Secondary</button>
+    <button class="btn ghost">Ghost</button>
+    <button class="btn danger">Danger</button>
+  </div>
+  <label>Sizes</label>
+  <div class="row">
+    <button class="btn primary sm">Small</button>
+    <button class="btn primary">Default</button>
+    <button class="btn primary lg">Large</button>
+  </div>
+  <label>States</label>
+  <div class="row">
+    <button class="btn primary" disabled>Disabled</button>
+    <button class="btn secondary" disabled>Disabled</button>
+  </div>
+</div>
+</body></html>

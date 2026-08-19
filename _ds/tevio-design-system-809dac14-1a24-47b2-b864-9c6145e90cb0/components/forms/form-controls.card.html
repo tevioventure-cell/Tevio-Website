@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens/colors.css">
+<link rel="stylesheet" href="../tokens/typography.css">
+<link rel="stylesheet" href="../tokens/spacing.css">
+<link rel="stylesheet" href="../tokens/radius.css">
+<link rel="stylesheet" href="../tokens/shadows.css">
+<style>body{margin:24px;background:var(--surface-sunken);font-family:var(--font-body);color:var(--text-primary)}</style>
+<title>Form Controls</title>
+<style>
+.demo{padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-6);max-width:460px}
+.field{display:flex;flex-direction:column;gap:var(--space-2)}
+label{font:var(--weight-medium) var(--text-sm)/1 var(--font-body);color:var(--text-primary)}
+input,select,textarea{width:100%;padding:10px 14px;border:1px solid var(--border-default);border-radius:var(--radius-md);font:var(--weight-regular) var(--text-sm)/1 var(--font-body);color:var(--text-primary);background:var(--surface-card);outline:none;transition:border-color var(--duration-fast)}
+input:focus,select:focus,textarea:focus{border-color:var(--border-focus);box-shadow:var(--shadow-focus)}
+textarea{min-height:100px;resize:vertical;line-height:var(--leading-normal)}
+.check-row{display:flex;align-items:center;gap:var(--space-3);cursor:pointer}
+.check-row input[type=checkbox],.check-row input[type=radio]{width:16px;height:16px;cursor:pointer;accent-color:var(--accent-primary)}
+.toggle{position:relative;width:40px;height:22px;flex-shrink:0}
+.toggle input{opacity:0;width:0;height:0}
+.toggle-track{position:absolute;inset:0;background:var(--slate-300);border-radius:var(--radius-pill);transition:background var(--duration-fast)}
+.toggle input:checked+.toggle-track{background:var(--accent-primary)}
+.toggle-thumb{position:absolute;top:3px;left:3px;width:16px;height:16px;background:#fff;border-radius:50%;transition:transform var(--duration-fast);box-shadow:var(--shadow-sm)}
+.toggle input:checked~.toggle-thumb{transform:translateX(18px)}
+</style></head><body>
+<div class="demo">
+  <div class="field"><label>Full name</label><input type="text" placeholder="Avnish Sharma"></div>
+  <div class="field"><label>Business area</label>
+    <select><option>Business & Process Consulting</option><option>AI Automation</option><option>Sales Alignment</option></select>
+  </div>
+  <div class="field"><label>Message</label><textarea placeholder="Describe the problem…"></textarea></div>
+  <div class="field">
+    <label style="margin-bottom:8px">Select all that apply</label>
+    <label class="check-row"><input type="checkbox" checked> Process Optimization</label>
+    <label class="check-row" style="margin-top:8px"><input type="checkbox"> AI Agents</label>
+  </div>
+  <div class="field">
+    <label style="margin-bottom:8px">Priority</label>
+    <label class="check-row"><input type="radio" name="p" checked> High</label>
+    <label class="check-row" style="margin-top:8px"><input type="radio" name="p"> Normal</label>
+  </div>
+  <div class="check-row">
+    <label class="toggle"><input type="checkbox" checked><span class="toggle-track"></span><span class="toggle-thumb"></span></label>
+    <span style="font:500 14px/1 var(--font-body);color:var(--text-secondary)">Receive updates by email</span>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../tokens/colors.css">
+<link rel="stylesheet" href="../../tokens/typography.css">
+<link rel="stylesheet" href="../../tokens/spacing.css">
+<link rel="stylesheet" href="../../tokens/radius.css">
+<link rel="stylesheet" href="../../tokens/shadows.css">
+<style>body{margin:24px;background:var(--surface-sunken);font-family:var(--font-body);color:var(--text-primary)}</style>
+<title>Spacing Scale</title>
+<style>
+.demo{padding:var(--space-4) 0;display:flex;flex-direction:column;gap:var(--space-3)}
+.row{display:flex;align-items:center;gap:var(--space-4)}
+.bar-wrap{flex:1;height:16px;background:var(--slate-100);border-radius:var(--radius-pill);overflow:hidden}
+.bar{height:100%;background:var(--navy-400);border-radius:var(--radius-pill)}
+.label{font:400 11px/1 var(--font-mono);color:var(--text-tertiary);min-width:80px}
+</style></head><body>
+<div class="demo">
+  <div class="row"><span class="label">--space-1 4px</span><div class="bar-wrap"><div class="bar" style="width:4px"></div></div></div>
+  <div class="row"><span class="label">--space-2 8px</span><div class="bar-wrap"><div class="bar" style="width:8px"></div></div></div>
+  <div class="row"><span class="label">--space-3 12px</span><div class="bar-wrap"><div class="bar" style="width:12px"></div></div></div>
+  <div class="row"><span class="label">--space-4 16px</span><div class="bar-wrap"><div class="bar" style="width:16px"></div></div></div>
+  <div class="row"><span class="label">--space-5 20px</span><div class="bar-wrap"><div class="bar" style="width:20px"></div></div></div>
+  <div class="row"><span class="label">--space-6 24px</span><div class="bar-wrap"><div class="bar" style="width:24px"></div></div></div>
+  <div class="row"><span class="label">--space-8 32px</span><div class="bar-wrap"><div class="bar" style="width:32px"></div></div></div>
+  <div class="row"><span class="label">--space-10 40px</span><div class="bar-wrap"><div class="bar" style="width:40px"></div></div></div>
+  <div class="row"><span class="label">--space-12 48px</span><div class="bar-wrap"><div class="bar" style="width:48px"></div></div></div>
+  <div class="row"><span class="label">--space-16 64px</span><div class="bar-wrap"><div class="bar" style="width:64px"></div></div></div>
+  <div class="row"><span class="label">--space-20 80px</span><div class="bar-wrap"><div class="bar" style="width:80px"></div></div></div>
+  <div class="row"><span class="label">--space-24 96px</span><div class="bar-wrap"><div class="bar" style="width:96px"></div></div></div>
+</div>
+</body></html>

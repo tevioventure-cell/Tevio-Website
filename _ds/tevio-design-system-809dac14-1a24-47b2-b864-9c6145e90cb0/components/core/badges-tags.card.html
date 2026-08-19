@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens/colors.css">
+<link rel="stylesheet" href="../tokens/typography.css">
+<link rel="stylesheet" href="../tokens/spacing.css">
+<link rel="stylesheet" href="../tokens/radius.css">
+<link rel="stylesheet" href="../tokens/shadows.css">
+<style>body{margin:24px;background:var(--surface-sunken);font-family:var(--font-body);color:var(--text-primary)}</style>
+<title>Badges & Tags</title>
+<style>
+.demo{display:flex;gap:var(--space-3);align-items:center;flex-wrap:wrap;padding:var(--space-6)}
+.badge{display:inline-flex;align-items:center;padding:3px 10px;border-radius:var(--radius-pill);font:var(--weight-medium) var(--text-xs)/1 var(--font-body);letter-spacing:var(--tracking-wide);text-transform:uppercase}
+.badge.neutral{background:var(--slate-100);color:var(--text-secondary)}
+.badge.success{background:var(--success-surface);color:var(--success)}
+.badge.warning{background:var(--warning-surface);color:var(--amber-600)}
+.badge.danger{background:var(--danger-surface);color:var(--danger)}
+.badge.brand{background:var(--navy-100);color:var(--navy-900)}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:var(--radius-pill);border:1px solid var(--border-default);font:var(--weight-medium) var(--text-sm)/1 var(--font-body);color:var(--text-secondary);background:var(--surface-card)}
+</style></head><body>
+<div class="demo">
+  <span class="badge neutral">Neutral</span>
+  <span class="badge success">Verified</span>
+  <span class="badge warning">Pending</span>
+  <span class="badge danger">Rejected</span>
+  <span class="badge brand">Brand</span>
+</div>
+<div class="demo">
+  <span class="tag">Process</span>
+  <span class="tag">AI Automation</span>
+  <span class="tag">Sales</span>
+</div>
+</body></html>

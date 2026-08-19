@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../tokens/colors.css">
+<link rel="stylesheet" href="../../tokens/typography.css">
+<link rel="stylesheet" href="../../tokens/spacing.css">
+<link rel="stylesheet" href="../../tokens/radius.css">
+<link rel="stylesheet" href="../../tokens/shadows.css">
+<style>body{margin:24px;background:var(--surface-sunken);font-family:var(--font-body);color:var(--text-primary)}</style>
+<title>Semantic Colors</title>
+<style>
+.row{display:flex;gap:var(--space-4);flex-wrap:wrap;padding:var(--space-5) 0}
+.group{display:flex;flex-direction:column;gap:6px}
+.group-label{font:var(--weight-semibold) var(--text-xs)/1 var(--font-body);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-tertiary);margin-bottom:4px}
+.swatches{display:flex;gap:var(--space-2)}
+.swatch{display:flex;flex-direction:column;gap:4px;width:64px}
+.chip{width:64px;height:40px;border-radius:var(--radius-md);border:1px solid rgba(0,0,0,.06)}
+.hex{font:400 10px/1 var(--font-mono);color:var(--text-tertiary)}
+</style></head><body>
+<div class="row">
+  <div class="group"><div class="group-label">Success / Verified</div><div class="swatches">
+    <div class="swatch"><div class="chip" style="background:#1f9e76"></div><span class="hex">#1f9e76</span></div>
+    <div class="swatch"><div class="chip" style="background:#d8f3e9"></div><span class="hex">#d8f3e9</span></div>
+  </div></div>
+  <div class="group"><div class="group-label">Warning</div><div class="swatches">
+    <div class="swatch"><div class="chip" style="background:#c97f14"></div><span class="hex">#c97f14</span></div>
+    <div class="swatch"><div class="chip" style="background:#fbe9cf"></div><span class="hex">#fbe9cf</span></div>
+  </div></div>
+  <div class="group"><div class="group-label">Danger</div><div class="swatches">
+    <div class="swatch"><div class="chip" style="background:#b02e3f"></div><span class="hex">#b02e3f</span></div>
+    <div class="swatch"><div class="chip" style="background:#f8dde1"></div><span class="hex">#f8dde1</span></div>
+  </div></div>
+</div>
+</body></html>

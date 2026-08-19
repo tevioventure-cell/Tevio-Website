@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens/colors.css">
+<link rel="stylesheet" href="../tokens/typography.css">
+<link rel="stylesheet" href="../tokens/spacing.css">
+<link rel="stylesheet" href="../tokens/radius.css">
+<link rel="stylesheet" href="../tokens/shadows.css">
+<style>body{margin:24px;background:var(--surface-sunken);font-family:var(--font-body);color:var(--text-primary)}</style>
+<title>Dialog</title>
+<style>
+.demo{padding:var(--space-6)}
+.scrim{position:relative;width:100%;height:280px;background:rgba(14,41,71,.45);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(2px)}
+.dialog{background:var(--surface-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);padding:var(--space-6);width:380px;max-width:90%}
+.dialog-title{font:var(--weight-semibold) var(--text-md)/var(--leading-snug) var(--font-body);margin:0 0 var(--space-2)}
+.dialog-body{font:var(--weight-regular) var(--text-sm)/var(--leading-relaxed) var(--font-body);color:var(--text-secondary);margin:0 0 var(--space-5)}
+.dialog-actions{display:flex;gap:var(--space-3);justify-content:flex-end}
+.btn{padding:9px 18px;border-radius:var(--radius-md);font:var(--weight-semibold) var(--text-sm)/1 var(--font-body);cursor:pointer;border:0}
+.btn.primary{background:var(--accent-primary);color:var(--text-inverse)}
+.btn.ghost{background:transparent;color:var(--text-secondary);border:1px solid var(--border-default)}
+</style></head><body>
+<div class="demo">
+  <div class="scrim">
+    <div class="dialog">
+      <p class="dialog-title">Confirm submission</p>
+      <p class="dialog-body">Your requirement brief will be sent to Tevio. We'll review it and get in touch within one business day.</p>
+      <div class="dialog-actions">
+        <button class="btn ghost">Cancel</button>
+        <button class="btn primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

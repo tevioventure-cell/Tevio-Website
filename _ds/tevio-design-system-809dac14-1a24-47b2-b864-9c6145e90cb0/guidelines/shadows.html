@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../tokens/colors.css">
+<link rel="stylesheet" href="../../tokens/typography.css">
+<link rel="stylesheet" href="../../tokens/spacing.css">
+<link rel="stylesheet" href="../../tokens/radius.css">
+<link rel="stylesheet" href="../../tokens/shadows.css">
+<style>body{margin:24px;background:var(--surface-sunken);font-family:var(--font-body);color:var(--text-primary)}</style>
+<title>Shadow & Elevation</title>
+<style>
+.demo{padding:var(--space-6);display:flex;gap:var(--space-6);flex-wrap:wrap;align-items:flex-end}
+.card{background:var(--surface-card);border-radius:var(--radius-lg);padding:var(--space-5) var(--space-6);display:flex;flex-direction:column;gap:var(--space-2);min-width:140px}
+.card-label{font:var(--weight-medium) var(--text-xs)/1 var(--font-body);color:var(--text-tertiary);letter-spacing:var(--tracking-wide);text-transform:uppercase}
+.card-name{font:var(--weight-semibold) var(--text-sm)/1 var(--font-body);color:var(--text-primary)}
+</style></head><body>
+<div class="demo">
+  <div class="card" style="box-shadow:var(--shadow-sm)"><span class="card-label">--shadow-sm</span><span class="card-name">Subtle</span></div>
+  <div class="card" style="box-shadow:var(--shadow-md)"><span class="card-label">--shadow-md</span><span class="card-name">Card</span></div>
+  <div class="card" style="box-shadow:var(--shadow-lg)"><span class="card-label">--shadow-lg</span><span class="card-name">Modal</span></div>
+  <div class="card" style="box-shadow:var(--shadow-focus);border:1px solid var(--border-focus)"><span class="card-label">--shadow-focus</span><span class="card-name">Focus ring</span></div>
+</div>
+</body></html>

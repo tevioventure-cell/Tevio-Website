@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens/colors.css">
+<link rel="stylesheet" href="../tokens/typography.css">
+<link rel="stylesheet" href="../tokens/spacing.css">
+<link rel="stylesheet" href="../tokens/radius.css">
+<link rel="stylesheet" href="../tokens/shadows.css">
+<style>body{margin:24px;background:var(--surface-sunken);font-family:var(--font-body);color:var(--text-primary)}</style>
+<title>Tabs</title>
+<style>
+.demo{padding:var(--space-6)}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--border-subtle);margin-bottom:var(--space-5)}
+.tab{padding:10px 18px;font:var(--weight-medium) var(--text-sm)/1 var(--font-body);color:var(--text-tertiary);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color var(--duration-fast)}
+.tab.active{color:var(--text-primary);border-bottom-color:var(--navy-900)}
+.tab:hover:not(.active){color:var(--text-secondary)}
+.panel{font:var(--weight-regular) var(--text-sm)/var(--leading-relaxed) var(--font-body);color:var(--text-secondary)}
+</style></head><body>
+<div class="demo">
+  <div class="tabs">
+    <div class="tab active">Overview</div>
+    <div class="tab">Process</div>
+    <div class="tab">AI & Automation</div>
+    <div class="tab">Results</div>
+  </div>
+  <div class="panel">Start with the problem. The right solution depends on understanding the business first — not matching a tool to a budget.</div>
+</div>
+</body></html>

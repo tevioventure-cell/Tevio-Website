@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens/colors.css">
+<link rel="stylesheet" href="../tokens/typography.css">
+<link rel="stylesheet" href="../tokens/spacing.css">
+<link rel="stylesheet" href="../tokens/radius.css">
+<link rel="stylesheet" href="../tokens/shadows.css">
+<style>body{margin:24px;background:var(--surface-sunken);font-family:var(--font-body);color:var(--text-primary)}</style>
+<title>Icon Buttons</title>
+<style>
+.demo{padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-5)}
+.row{display:flex;gap:var(--space-3);align-items:center}
+.icon-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:var(--radius-md);border:0;cursor:pointer;transition:background var(--duration-fast),transform var(--duration-fast)}
+.icon-btn:active{transform:scale(.93)}
+.icon-btn.ghost{background:transparent;color:var(--text-secondary)}
+.icon-btn.ghost:hover{background:var(--slate-100)}
+.icon-btn.filled{background:var(--slate-100);color:var(--text-primary)}
+.icon-btn.filled:hover{background:var(--slate-200)}
+.icon-btn.solid{background:var(--accent-primary);color:var(--text-inverse)}
+.icon-btn.solid:hover{background:var(--accent-primary-hover)}
+.icon-btn.lg{width:44px;height:44px;border-radius:var(--radius-lg)}
+label{font:var(--weight-medium) var(--text-xs)/1 var(--font-body);color:var(--text-tertiary);letter-spacing:var(--tracking-wide);text-transform:uppercase}
+</style></head><body>
+<div class="demo">
+  <label>Variants</label>
+  <div class="row">
+    <button class="icon-btn ghost" title="ghost">✕</button>
+    <button class="icon-btn filled" title="filled">↑</button>
+    <button class="icon-btn solid" title="solid">→</button>
+  </div>
+  <label>Sizes</label>
+  <div class="row">
+    <button class="icon-btn ghost">→</button>
+    <button class="icon-btn ghost lg">→</button>
+  </div>
+</div>
+</body></html>

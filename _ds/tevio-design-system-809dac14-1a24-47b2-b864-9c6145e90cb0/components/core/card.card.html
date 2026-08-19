@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens/colors.css">
+<link rel="stylesheet" href="../tokens/typography.css">
+<link rel="stylesheet" href="../tokens/spacing.css">
+<link rel="stylesheet" href="../tokens/radius.css">
+<link rel="stylesheet" href="../tokens/shadows.css">
+<style>body{margin:24px;background:var(--surface-sunken);font-family:var(--font-body);color:var(--text-primary)}</style>
+<title>Card</title>
+<style>
+.demo{padding:var(--space-6);display:flex;gap:var(--space-5);flex-wrap:wrap}
+.card{background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);padding:var(--space-6);min-width:260px;max-width:320px}
+.card-title{font:var(--weight-semibold) var(--text-md)/var(--leading-snug) var(--font-body);color:var(--text-primary);margin:0 0 var(--space-2)}
+.card-body{font:var(--weight-regular) var(--text-sm)/var(--leading-relaxed) var(--font-body);color:var(--text-secondary);margin:0 0 var(--space-5)}
+.card-footer{border-top:1px solid var(--border-subtle);padding-top:var(--space-4);display:flex;gap:var(--space-3)}
+.btn{display:inline-flex;align-items:center;padding:8px 16px;border-radius:var(--radius-md);font:var(--weight-semibold) var(--text-sm)/1 var(--font-body);cursor:pointer;border:0}
+.btn.primary{background:var(--accent-primary);color:var(--text-inverse)}
+.btn.ghost{background:transparent;color:var(--text-secondary);border:1px solid var(--border-default)}
+</style></head><body>
+<div class="demo">
+  <div class="card">
+    <p class="card-title">Business Consulting</p>
+    <p class="card-body">Understand the business, identify gaps and create a practical improvement roadmap.</p>
+    <div class="card-footer">
+      <button class="btn primary">Learn more</button>
+      <button class="btn ghost">Dismiss</button>
+    </div>
+  </div>
+  <div class="card">
+    <p class="card-title">Sales Process Alignment</p>
+    <p class="card-body">Find leakage across the sales journey and align people, process, tools and follow-up.</p>
+    <div class="card-footer">
+      <button class="btn primary">Learn more</button>
+    </div>
+  </div>
+</div>
+</body></html>
